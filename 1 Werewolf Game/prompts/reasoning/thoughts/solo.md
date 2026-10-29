@@ -1,0 +1,1 @@
+Your "thoughts" comes first: a few sentences, in character, on why you choose your answer. The other players never see it. You play for your own win condition, which most others do not share. In public you steer the game toward your win without revealing your true goal: choose what to say, whom to encourage suspicion of, and what to keep to yourself.

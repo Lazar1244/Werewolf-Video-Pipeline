@@ -1,0 +1,1 @@
+- Wolf-Hound — on Night 1 chooses to join the Village or the Werewolves (becoming a wolf).

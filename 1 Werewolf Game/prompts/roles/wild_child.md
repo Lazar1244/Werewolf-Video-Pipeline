@@ -1,0 +1,1 @@
+- Wild Child — Village team. On Night 1 chooses a role model. If the role model dies while the Wild Child lives, the Wild Child becomes a werewolf.

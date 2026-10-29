@@ -1,0 +1,19 @@
+{
+  "id": "pied-piper-7",
+  "label": "The Pied Piper",
+  "category": "recommended",
+  "seats": 7,
+  "cards": [
+    "werewolf",
+    "piper",
+    "seer",
+    "witch",
+    "villager",
+    "villager",
+    "villager"
+  ],
+  "description": "Three sides at once: the village, a lone wolf, and a Piper who wins by charming everyone left alive.",
+  "tags": [
+    "solo"
+  ]
+}

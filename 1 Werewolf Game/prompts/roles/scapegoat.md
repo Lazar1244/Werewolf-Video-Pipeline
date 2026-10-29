@@ -1,0 +1,1 @@
+- Scapegoat — Village team. If a runoff vote stays tied, the Scapegoat is executed instead of nobody. As their dying act, the Scapegoat chooses which living players may vote the next day; everyone else may not.

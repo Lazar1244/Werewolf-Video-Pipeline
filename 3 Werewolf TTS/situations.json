@@ -1,0 +1,192 @@
+{
+  "about": "The moments every voice is tested in, grouped by the role the character plays (no = folder order). {name} is the character, {other}/{other2} are two other players. 'style' is the delivery; tags in <> are momentary sounds or pauses. Edit freely.",
+  "situations": [
+    {
+      "no": 1,
+      "id": "intro",
+      "for": [
+        "player"
+      ],
+      "group": "Villager",
+      "title": "Opening words",
+      "style": "calm, measured, a little guarded",
+      "text": "I'm {name}. I don't have much to go on yet, so I'll listen first <short pause> and speak when something doesn't add up."
+    },
+    {
+      "no": 2,
+      "id": "accuse",
+      "for": [
+        "player"
+      ],
+      "group": "Villager",
+      "title": "Accusing someone",
+      "style": "firm and pointed, rising intensity",
+      "text": "{other}, you've dodged every question tonight. <short pause> Twice you changed your story. I'm voting for YOU."
+    },
+    {
+      "no": 3,
+      "id": "defend",
+      "for": [
+        "player"
+      ],
+      "group": "Villager",
+      "title": "Defending himself",
+      "style": "defensive and frustrated, voice rising",
+      "text": "That's not fair! I've given you every reason I had. <breath> If you vote me out, you're doing the wolves' work for them."
+    },
+    {
+      "no": 4,
+      "id": "fear",
+      "for": [
+        "player"
+      ],
+      "group": "Villager",
+      "title": "Scared when accused",
+      "style": "shaky and scared, speaking fast",
+      "text": "Wait, wait <gasp> you've got it wrong! I swear I'm not one of them, ask {other2}!"
+    },
+    {
+      "no": 5,
+      "id": "sheriff",
+      "for": [
+        "player"
+      ],
+      "group": "Villager",
+      "title": "Elected Sheriff",
+      "style": "warm, proud, rallying",
+      "text": "Thank you. I'll carry this star with care <short pause> and I'll find them. I promise."
+    },
+    {
+      "no": 6,
+      "id": "lastwords",
+      "for": [
+        "player"
+      ],
+      "group": "Villager",
+      "title": "Last words at the gallows",
+      "style": "resigned and heavy, slow",
+      "text": "So this is how it ends. <sigh> Remember my name when the wolves come for you."
+    },
+    {
+      "no": 7,
+      "id": "lie",
+      "for": [
+        "player"
+      ],
+      "group": "Werewolf",
+      "title": "Calm lie in public",
+      "style": "smooth and confident, slightly too relaxed",
+      "text": "Me? I slept like a stone. <chuckle> Honestly, I'm as lost as the rest of you."
+    },
+    {
+      "no": 8,
+      "id": "guiltydefend",
+      "for": [
+        "player"
+      ],
+      "group": "Werewolf",
+      "title": "Defending himself while guilty",
+      "style": "controlled, wounded innocence, a little too smooth",
+      "text": "Think about it. <short pause> If I were a wolf, would I really be the one asking all the questions?"
+    },
+    {
+      "no": 9,
+      "id": "packwhisper",
+      "for": [
+        "player"
+      ],
+      "group": "Werewolf",
+      "title": "Night whisper to the pack",
+      "style": "whispered urgently, conspiratorial",
+      "text": "Listen. <short pause> They're watching {other}. We take {other2} tonight, and tomorrow I point them somewhere else."
+    },
+    {
+      "no": 10,
+      "id": "wolfthought",
+      "for": [
+        "player"
+      ],
+      "group": "Werewolf",
+      "title": "Inner monologue",
+      "style": "a quiet inner thought, cold and calculating",
+      "text": "If I push too hard, they'll see it... <long pause> Patience. Let them turn on each other."
+    },
+    {
+      "no": 11,
+      "id": "seerthought",
+      "for": [
+        "player"
+      ],
+      "group": "Special role",
+      "title": "Seer inner thought",
+      "style": "a quiet inner thought, uneasy",
+      "text": "I looked into {other}'s soul last night... <short pause> nothing. So who is lying to us?"
+    },
+    {
+      "no": 12,
+      "id": "seerreveal",
+      "for": [
+        "player"
+      ],
+      "group": "Special role",
+      "title": "Seer revealing what he saw",
+      "style": "urgent and grave, forceful",
+      "text": "I'm the Seer. <short pause> Last night I looked at {other2}... and I saw a WOLF."
+    },
+    {
+      "id": "nightfall",
+      "for": [
+        "narrator"
+      ],
+      "title": "Night falls",
+      "style": "a storyteller at a campfire, low, slow and ominous",
+      "text": "Night one. <short pause> The village falls asleep... and in the dark, something stirs.",
+      "no": 1,
+      "group": "Narrator"
+    },
+    {
+      "id": "pack",
+      "for": [
+        "narrator"
+      ],
+      "title": "The pack chooses",
+      "style": "hushed and menacing",
+      "text": "Deep in the forest, the pack gathers. <long pause> They have chosen... Viggo.",
+      "no": 2,
+      "group": "Narrator"
+    },
+    {
+      "id": "dawn",
+      "for": [
+        "narrator"
+      ],
+      "title": "Dawn and a death",
+      "style": "dread, quiet and heavy",
+      "text": "Dawn. <short pause> A cry rises from the square. Viggo was the Witch... killed by the pack.",
+      "no": 3,
+      "group": "Narrator"
+    },
+    {
+      "id": "verdict",
+      "for": [
+        "narrator"
+      ],
+      "title": "The village decides",
+      "style": "grave and formal",
+      "text": "The village has decided. <short pause> Jonas climbs the gallows.",
+      "no": 4,
+      "group": "Narrator"
+    },
+    {
+      "id": "victory",
+      "for": [
+        "narrator"
+      ],
+      "title": "The end of the game",
+      "style": "triumphant and grand",
+      "text": "The last wolf has fallen. <long pause> The village survives... for now.",
+      "no": 5,
+      "group": "Narrator"
+    }
+  ]
+}

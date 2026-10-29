@@ -1,0 +1,1 @@
+- Accursed Wolf-Father — Werewolf team (wolf nature). Once per game, after the pack chooses its victim, may infect that victim instead of killing them. The infected player secretly joins the werewolves, keeping their role and powers; the pack learns who it is and their role at Dawn.

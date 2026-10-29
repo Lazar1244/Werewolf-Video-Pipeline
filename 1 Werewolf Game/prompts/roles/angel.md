@@ -1,0 +1,1 @@
+- Angel — its own team. Wins alone if it dies before Night 2 (killed on Night 1 or executed on Day 1). If it survives to Dusk 1, it becomes a plain Village-team player.

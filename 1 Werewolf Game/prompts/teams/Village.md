@@ -1,0 +1,1 @@
+- Village: wins when every living player is on the Village team (all werewolves and solo threats are dead).

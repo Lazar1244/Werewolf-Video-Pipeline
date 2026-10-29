@@ -1,0 +1,19 @@
+{
+  "id": "sisters-watch-7",
+  "label": "Sisters' Watch",
+  "category": "recommended",
+  "seats": 7,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "two_sisters",
+    "two_sisters",
+    "seer",
+    "protector",
+    "villager"
+  ],
+  "description": "Two Sisters know each other and whisper at night: two players who can trust each other, and who can vouch for each other in the day. The wolves would love to find them.",
+  "tags": [
+    "information"
+  ]
+}

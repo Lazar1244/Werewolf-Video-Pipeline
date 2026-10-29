@@ -1,0 +1,22 @@
+{
+  "id": "double-cross-8",
+  "label": "Double-Cross",
+  "category": "recommended",
+  "seats": 8,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "wolf_hound",
+    "wild_child",
+    "seer",
+    "witch",
+    "hunter",
+    "villager"
+  ],
+  "description": "The Wolf-Hound picks a side on the first night and the Wild Child turns wolf if their role model dies. Nobody is sure of anyone.",
+  "tags": [
+    "deception",
+    "twists"
+  ],
+  "notes": "Leans towards the wolves in random-bot play (the Wolf-Hound often joins them): calibration candidate."
+}

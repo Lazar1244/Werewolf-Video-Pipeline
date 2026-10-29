@@ -1,0 +1,1 @@
+Your "inner_voice" comes first: your character's inner voice: one to three sentences, in their own voice, of what they make of the game right now and what they mean to do. The other players never see it. Go by what your character actually knows: the engine facts, your private information, who said what, the votes, contradictions and claims.

@@ -1,0 +1,303 @@
+{
+  "name": "Elin",
+  "kind": "player",
+  "gender": "female",
+  "candidates": [
+    {
+      "label": "A",
+      "voice": "voice_h75oqzqp7obm",
+      "description": "A cheerful woman in her late 20s with a bright, sing-song mezzo voice, a strong Norwegian accent, and a bouncy pace.",
+      "created": "2026-10-08",
+      "expire_time": "2027-10-08T11:22:47.377506763Z",
+      "usage": {
+        "total_tokens": 1391,
+        "total_input_tokens": 243,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 93
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1148,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1148
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 199,
+        "raw_prompt_token": 406,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 256
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1153
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 199
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 256
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1153
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 199
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "B",
+      "voice": "voice_aoarvxmyy25k",
+      "description": "A warm woman in her late 30s with a rich, friendly alto voice, a strong Norwegian accent, and an easy, relaxed pace.",
+      "created": "2026-10-08",
+      "expire_time": "2027-10-08T11:23:11.600857619Z",
+      "usage": {
+        "total_tokens": 982,
+        "total_input_tokens": 218,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 68
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 764,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 764
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 122,
+        "raw_prompt_token": 381,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 231
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 769
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 122
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 231
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 769
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 122
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "C",
+      "voice": "voice_gtywj7i25lbe",
+      "description": "A bubbly young woman in her early 20s with a high, clear voice, a strong Norwegian accent, and a quick, chirpy pace.",
+      "created": "2026-10-08",
+      "expire_time": "2027-10-08T11:23:56.088873508Z",
+      "usage": {
+        "total_tokens": 1679,
+        "total_input_tokens": 319,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 169
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1360,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1360
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 276,
+        "raw_prompt_token": 482,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 332
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1365
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 276
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 332
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1365
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 276
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "voice": "voice_aoarvxmyy25k",
+  "locked": true,
+  "base_style": "",
+  "notes": "",
+  "voice_description": "A warm woman in her late 30s with a rich, friendly alto voice, a strong Norwegian accent, and an easy, relaxed pace.",
+  "approved": {
+    "intro": {
+      "take": 10,
+      "style": "",
+      "text": "I'm Elin. I don't have much to go on yet, so I'll listen first <short pause> and speak when something doesn't add up.",
+      "folder": "output\\Elin\\01 Villager - Opening words"
+    },
+    "accuse": {
+      "take": 11,
+      "style": "firm and pointed, rising intensity",
+      "text": "Greta, you've dodged every question tonight. <short pause> Twice you changed your story. I'm voting for YOU.",
+      "folder": "output\\Elin\\02 Villager - Accusing someone"
+    },
+    "defend": {
+      "take": 12,
+      "style": "defensive and frustrated, voice rising",
+      "text": "That's not fair! I've given you every reason I had. <breath> If you vote me out, you're doing the wolves' work for them.",
+      "folder": "output\\Elin\\03 Villager - Defending herself"
+    },
+    "fear": {
+      "take": 13,
+      "style": "shaky and scared, speaking fast",
+      "text": "Wait, wait <gasp> you've got it wrong! I swear I'm not one of them, ask Soren!",
+      "folder": "output\\Elin\\04 Villager - Scared when accused"
+    },
+    "sheriff": {
+      "take": 14,
+      "style": "firm and determined, full of conviction",
+      "text": "Thank you. I'll carry this star with care <short pause> and I WILL find them. I promise.",
+      "folder": "output\\Elin\\05 Villager - Elected Sheriff"
+    },
+    "lastwords": {
+      "take": 15,
+      "style": "resigned and heavy, slow",
+      "text": "So this is how it ends. <sigh> Remember my name when the wolves come for you.",
+      "folder": "output\\Elin\\06 Villager - Last words at the gallows"
+    },
+    "lie": {
+      "take": 16,
+      "style": "smooth and confident, slightly too relaxed, strong Norwegian accent",
+      "text": "Me? I slept like a stone. <chuckle> Honestly, I'm as lost as the rest of you.",
+      "folder": "output\\Elin\\07 Werewolf - Calm lie in public"
+    },
+    "guiltydefend": {
+      "take": 17,
+      "style": "controlled, wounded innocence, a little too smooth, strong Norwegian accent",
+      "text": "Think about it. <short pause> If I were a wolf, would I really be the one asking all the questions?",
+      "folder": "output\\Elin\\08 Werewolf - Defending herself while guilty"
+    },
+    "packwhisper": {
+      "take": 18,
+      "style": "whispered urgently, conspiratorial, strong Norwegian accent",
+      "text": "Listen. <short pause> They're watching Greta. We take Soren tonight, and tomorrow I point them somewhere else.",
+      "folder": "output\\Elin\\09 Werewolf - Night whisper to the pack"
+    },
+    "seerthought": {
+      "take": 19,
+      "style": "whispering to herself, uneasy, strong Norwegian accent",
+      "text": "I looked into Greta's soul last night... <short pause> nothing. So who is lying to us?",
+      "folder": "output\\Elin\\11 Special role - Seer inner thought"
+    },
+    "seerreveal": {
+      "take": 20,
+      "style": "urgent and grave, forceful",
+      "text": "I'm the Seer. <short pause> Last night I looked at Soren... and I saw a WOLF.",
+      "folder": "output\\Elin\\12 Special role - Seer revealing what she saw"
+    },
+    "wolfthought": {
+      "take": 21,
+      "style": "whispering to herself, cold and calculating, strong Norwegian accent",
+      "text": "If I push too hard, they'll see it... <long pause> Patience. Let them turn on each other.",
+      "folder": "output\\Elin\\10 Werewolf - Inner monologue"
+    }
+  },
+  "locked_at": "2026-10-12"
+}

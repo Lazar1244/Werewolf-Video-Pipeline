@@ -1,0 +1,1 @@
+- Stuttering Judge — Village team. Once per game, may secretly flag their first ballot of a day to call a second vote that day (after the first vote's result). The flag is never revealed.

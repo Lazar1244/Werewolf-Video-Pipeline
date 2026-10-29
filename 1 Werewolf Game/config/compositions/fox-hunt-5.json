@@ -1,0 +1,18 @@
+{
+  "id": "fox-hunt-5",
+  "label": "Fox Hunt",
+  "category": "recommended",
+  "seats": 5,
+  "cards": [
+    "werewolf",
+    "fox",
+    "hunter",
+    "villager",
+    "villager"
+  ],
+  "description": "No Seer: the Fox sniffs out groups of three instead, and loses the gift the first time it finds nothing. Short and full of guessing — and it can end with nobody left standing.",
+  "tags": [
+    "quick",
+    "information"
+  ]
+}

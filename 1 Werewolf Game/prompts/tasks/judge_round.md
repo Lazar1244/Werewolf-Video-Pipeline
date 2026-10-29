@@ -1,0 +1,1 @@
+A second vote has been called today. One short round of speeches: speak in "speech" (at most {{words}} words). Set "lean" to the seat you suspect most right now (or null), and "claim" to a role claim you make in this speech ({"role": role id, "result": short text or null}) or null.

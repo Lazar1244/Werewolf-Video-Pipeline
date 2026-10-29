@@ -1,0 +1,1 @@
+- Witch — Village team. Has one healing potion and one poison, each usable once per game (both may be used the same night). At night she learns only who the pack attacked. She may heal that player{{witch_self}}; she may poison any other living player (not herself, and not the player she heals that night).

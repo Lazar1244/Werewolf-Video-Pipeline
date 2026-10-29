@@ -1,0 +1,1 @@
+- Knight with the Rusty Sword — Village team. If killed by the werewolves (the pack's victim or the Big Bad Wolf's victim), the nearest living wolf to the Knight's left (skipping wolves who die at the same dawn) is cursed and dies at the next Dawn.

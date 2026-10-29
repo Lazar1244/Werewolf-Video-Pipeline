@@ -1,0 +1,22 @@
+{
+  "id": "court-day-9",
+  "label": "Court Day",
+  "category": "recommended",
+  "seats": 9,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "seer",
+    "stuttering_judge",
+    "scapegoat",
+    "village_idiot",
+    "villager",
+    "villager",
+    "villager"
+  ],
+  "description": "A game of votes: the Judge can secretly call a second vote once, the Scapegoat dies when a tie survives the runoff, and the Idiot survives the rope.",
+  "tags": [
+    "votes",
+    "deception"
+  ]
+}

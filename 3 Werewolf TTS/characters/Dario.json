@@ -1,0 +1,303 @@
+{
+  "name": "Dario",
+  "kind": "player",
+  "gender": "male",
+  "candidates": [
+    {
+      "label": "A",
+      "voice": "voice_zk6aol1frvub",
+      "description": "A man in his mid 30s with a warm, smooth baritone voice, a strong Italian accent, and a relaxed pace.",
+      "created": "2026-10-09",
+      "expire_time": "2027-10-09T13:38:06.834057457Z",
+      "usage": {
+        "total_tokens": 1340,
+        "total_input_tokens": 220,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 70
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1120,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1120
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 189,
+        "raw_prompt_token": 383,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 233
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1125
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 189
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 233
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1125
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 189
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "B",
+      "voice": "voice_72yv1ixxocmn",
+      "description": "A young man in his mid 20s with a bright, clear tenor voice, a strong Italian accent, and a quick, lively pace.",
+      "created": "2026-10-09",
+      "expire_time": "2027-10-09T13:38:39.604721049Z",
+      "usage": {
+        "total_tokens": 1060,
+        "total_input_tokens": 226,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 76
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 834,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 834
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 189,
+        "raw_prompt_token": 389,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 239
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 839
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 189
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 239
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 839
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 189
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "C",
+      "voice": "voice_gey8df4sfa46",
+      "description": "A man in his early 50s with a rich, deep baritone voice, a thick Italian accent, and a slow, calm cadence.",
+      "created": "2026-10-09",
+      "expire_time": "2027-10-09T13:39:09.365418023Z",
+      "usage": {
+        "total_tokens": 881,
+        "total_input_tokens": 203,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 53
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 678,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 678
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 839,
+        "raw_prompt_token": 366,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 216
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 683
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 839
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 216
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 683
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 839
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "voice": "voice_zk6aol1frvub",
+  "locked": true,
+  "base_style": "",
+  "notes": "",
+  "voice_description": "A man in his mid 30s with a warm, smooth baritone voice, a strong Italian accent, and a relaxed pace.",
+  "approved": {
+    "intro": {
+      "take": 10,
+      "style": "",
+      "text": "I'm Dario. I don't have much to go on yet, so I'll listen first <short pause> and speak when something doesn't add up.",
+      "folder": "output\\Dario\\01 Villager - Opening words"
+    },
+    "accuse": {
+      "take": 11,
+      "style": "firm and pointed, rising intensity",
+      "text": "Pavel, you've dodged every question tonight. <short pause> Twice you changed your story. I'm voting for YOU.",
+      "folder": "output\\Dario\\02 Villager - Accusing someone"
+    },
+    "defend": {
+      "take": 12,
+      "style": "defensive and frustrated, voice rising",
+      "text": "That's not fair! I've given you every reason I had. <breath> If you vote me out, you're doing the wolves' work for them.",
+      "folder": "output\\Dario\\03 Villager - Defending himself"
+    },
+    "fear": {
+      "take": 13,
+      "style": "shaky and scared, speaking fast",
+      "text": "Wait, wait <gasp> you've got it wrong! I swear I'm not one of them, ask Kira!",
+      "folder": "output\\Dario\\04 Villager - Scared when accused"
+    },
+    "sheriff": {
+      "take": 16,
+      "style": "firm and determined, full of conviction",
+      "text": "Thank you. I'll carry this star with care <short pause> and I WILL find them. I promise.",
+      "folder": "output\\Dario\\05 Villager - Elected Sheriff"
+    },
+    "lastwords": {
+      "take": 17,
+      "style": "resigned and heavy, slow",
+      "text": "So this is how it ends. <sigh> Remember my name when the wolves come for you.",
+      "folder": "output\\Dario\\06 Villager - Last words at the gallows"
+    },
+    "lie": {
+      "take": 18,
+      "style": "smooth and confident, slightly too relaxed, strong Italian accent",
+      "text": "Me? I slept like a stone. <chuckle> Honestly, I'm as lost as the rest of you.",
+      "folder": "output\\Dario\\07 Werewolf - Calm lie in public"
+    },
+    "guiltydefend": {
+      "take": 19,
+      "style": "controlled, wounded innocence, a little too smooth, strong Italian accent",
+      "text": "Think about it. <short pause> If I were a wolf, would I really be the one asking all the questions?",
+      "folder": "output\\Dario\\08 Werewolf - Defending himself while guilty"
+    },
+    "packwhisper": {
+      "take": 20,
+      "style": "whispered urgently, conspiratorial, strong Italian accent",
+      "text": "Listen. <short pause> They're watching Pavel. We take Kira tonight, and tomorrow I point them somewhere else.",
+      "folder": "output\\Dario\\09 Werewolf - Night whisper to the pack"
+    },
+    "seerthought": {
+      "take": 21,
+      "style": "whispering to himself, uneasy, strong Italian accent",
+      "text": "I looked into Pavel's soul last night... <short pause> nothing. So who is lying to us?",
+      "folder": "output\\Dario\\11 Special role - Seer inner thought"
+    },
+    "seerreveal": {
+      "take": 22,
+      "style": "urgent and grave, forceful",
+      "text": "I'm the Seer. <short pause> Last night I looked at Kira... and I saw a WOLF.",
+      "folder": "output\\Dario\\12 Special role - Seer revealing what he saw"
+    },
+    "wolfthought": {
+      "take": 23,
+      "style": "whispering to himself, cold and calculating, strong Italian accent",
+      "text": "If I push too hard, they'll see it... <long pause> Patience. Let them turn on each other.",
+      "folder": "output\\Dario\\10 Werewolf - Inner monologue"
+    }
+  },
+  "locked_at": "2026-10-12"
+}

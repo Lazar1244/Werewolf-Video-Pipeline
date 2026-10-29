@@ -1,0 +1,1 @@
+- Werewolf — Werewolf team (wolf nature). Knows the other pack members and chooses the night's victim with them.

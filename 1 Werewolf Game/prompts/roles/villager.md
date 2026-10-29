@@ -1,0 +1,1 @@
+- Villager — Village team. No special power. Find the werewolves through discussion and votes.

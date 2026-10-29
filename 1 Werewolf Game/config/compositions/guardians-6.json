@@ -1,0 +1,18 @@
+{
+  "id": "guardians-6",
+  "label": "Guardians",
+  "category": "recommended",
+  "seats": 6,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "seer",
+    "protector",
+    "hunter",
+    "villager"
+  ],
+  "description": "The Protector guards someone every night and the Hunter punishes a wrong kill. The wolves must guess who is shielded.",
+  "tags": [
+    "beginner"
+  ]
+}

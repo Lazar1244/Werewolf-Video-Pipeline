@@ -1,0 +1,303 @@
+{
+  "name": "Fenn",
+  "kind": "player",
+  "gender": "male",
+  "candidates": [
+    {
+      "label": "A",
+      "voice": "voice_8gmtf94h0vdk",
+      "description": "A gruff young man in his mid 20s with a low, rough voice, a strong Cockney accent, and a clipped, blunt pace.",
+      "created": "2026-10-08",
+      "expire_time": "2027-10-08T11:19:08.490573531Z",
+      "usage": {
+        "total_tokens": 445,
+        "total_input_tokens": 237,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 87
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 208,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 208
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 971,
+        "raw_prompt_token": 400,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 250
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 212
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 971
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 250
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 212
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 971
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "B",
+      "voice": "voice_cnguga71qmdt",
+      "description": "A wiry street-smart man in his early 30s with a sharp, raspy tenor voice, a strong Cockney accent, and a fast, cheeky pace.",
+      "created": "2026-10-08",
+      "expire_time": "2027-10-08T11:19:33.399589251Z",
+      "usage": {
+        "total_tokens": 927,
+        "total_input_tokens": 246,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 96
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 681,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 681
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 177,
+        "raw_prompt_token": 409,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 259
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 686
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 177
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 259
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 686
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 177
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "C",
+      "voice": "voice_afe9evrxv2k1",
+      "description": "A hard-bitten man in his late 40s with a deep, gravelly voice, a thick Cockney accent, and a slow, blunt cadence.",
+      "created": "2026-10-08",
+      "expire_time": "2027-10-08T11:20:00.106478900Z",
+      "usage": {
+        "total_tokens": 632,
+        "total_input_tokens": 237,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 87
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 395,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 395
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 840,
+        "raw_prompt_token": 400,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 250
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 400
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 840
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 250
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 400
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 840
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "voice": "voice_8gmtf94h0vdk",
+  "locked": true,
+  "base_style": "",
+  "notes": "",
+  "voice_description": "A gruff young man in his mid 20s with a low, rough voice, a strong Cockney accent, and a clipped, blunt pace.",
+  "approved": {
+    "intro": {
+      "take": 10,
+      "style": "speaking up clearly to the whole circle, full voice",
+      "text": "I'm Fenn. I don't have much to go on yet, so I'll listen first <short pause> and speak when something doesn't add up.",
+      "folder": "output\\Fenn\\01 Villager - Opening words"
+    },
+    "accuse": {
+      "take": 11,
+      "style": "firm and pointed, rising intensity",
+      "text": "Jonas, you've dodged every question tonight. <short pause> Twice you changed your story. I'm voting for YOU.",
+      "folder": "output\\Fenn\\02 Villager - Accusing someone"
+    },
+    "defend": {
+      "take": 12,
+      "style": "defensive and frustrated, voice rising",
+      "text": "That's not fair! I've given you every reason I had. <breath> If you vote me out, you're doing the wolves' work for them.",
+      "folder": "output\\Fenn\\03 Villager - Defending himself"
+    },
+    "fear": {
+      "take": 13,
+      "style": "shaky and scared, speaking fast",
+      "text": "Wait, wait <gasp> you've got it wrong! I swear I'm not one of them, ask Dario!",
+      "folder": "output\\Fenn\\04 Villager - Scared when accused"
+    },
+    "sheriff": {
+      "take": 14,
+      "style": "firm and determined, full of conviction",
+      "text": "Thank you. I'll carry this star with care <short pause> and I WILL find them. I promise.",
+      "folder": "output\\Fenn\\05 Villager - Elected Sheriff"
+    },
+    "lastwords": {
+      "take": 15,
+      "style": "resigned and heavy, slow",
+      "text": "So this is how it ends. <sigh> Remember my name when the wolves come for you.",
+      "folder": "output\\Fenn\\06 Villager - Last words at the gallows"
+    },
+    "lie": {
+      "take": 16,
+      "style": "smooth and confident, slightly too relaxed, strong Cockney accent",
+      "text": "Me? I slept like a stone. <chuckle> Honestly, I'm as lost as the rest of you.",
+      "folder": "output\\Fenn\\07 Werewolf - Calm lie in public"
+    },
+    "guiltydefend": {
+      "take": 17,
+      "style": "controlled, wounded innocence, a little too smooth, strong Cockney accent",
+      "text": "Think about it. <short pause> If I were a wolf, would I really be the one asking all the questions?",
+      "folder": "output\\Fenn\\08 Werewolf - Defending himself while guilty"
+    },
+    "packwhisper": {
+      "take": 18,
+      "style": "whispered urgently, conspiratorial, strong Cockney accent",
+      "text": "Listen. <short pause> They're watching Jonas. We take Dario tonight, and tomorrow I point them somewhere else.",
+      "folder": "output\\Fenn\\09 Werewolf - Night whisper to the pack"
+    },
+    "seerthought": {
+      "take": 19,
+      "style": "whispering to himself, uneasy, strong Cockney accent",
+      "text": "I looked into Jonas's soul last night... <short pause> nothing. So who is lying to us?",
+      "folder": "output\\Fenn\\11 Special role - Seer inner thought"
+    },
+    "seerreveal": {
+      "take": 20,
+      "style": "urgent and grave, forceful",
+      "text": "I'm the Seer. <short pause> Last night I looked at Dario... and I saw a WOLF.",
+      "folder": "output\\Fenn\\12 Special role - Seer revealing what he saw"
+    },
+    "wolfthought": {
+      "take": 21,
+      "style": "whispering to himself, cold and calculating, strong Cockney accent",
+      "text": "If I push too hard, they'll see it... <long pause> Patience. Let them turn on each other.",
+      "folder": "output\\Fenn\\10 Werewolf - Inner monologue"
+    }
+  },
+  "locked_at": "2026-10-12"
+}

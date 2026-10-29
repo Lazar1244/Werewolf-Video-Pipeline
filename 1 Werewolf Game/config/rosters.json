@@ -1,0 +1,48 @@
+{
+  "rosters": {
+    "cheap-mixed": [
+      "deepseek-flash",
+      "gpt-luna",
+      "gemini-flash",
+      "qwen-flash",
+      "glm-flash",
+      "mimo-flash",
+      "minimax-m3",
+      "llama-maverick",
+      "claude-haiku"
+    ],
+    "budget": [
+      "glm-flash",
+      "mimo-flash",
+      "deepseek-flash",
+      "qwen-flash",
+      "llama-maverick",
+      "gpt-luna"
+    ],
+    "quick-test": [
+      "glm-flash",
+      "deepseek-flash",
+      "qwen-flash",
+      "mimo-flash",
+      "minimax-m3"
+    ],
+    "china-top": [
+      "deepseek-pro-0813",
+      "kimi-k3-1-pro",
+      "qwen-max-prime",
+      "glm-5-3-prime",
+      "seed-2-1-turbo",
+      "hunyuan-4",
+      "step-5"
+    ],
+    "usa-top": [
+      "gpt-6-1-sol",
+      "claude-sonnet-5-5",
+      "gemini-4-argon",
+      "grok-4-7",
+      "muse-wonder",
+      "claude-opus-5-5",
+      "gpt-6-1-terra"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+- "thoughts" comes first: a few sentences, in character, on why you choose your answer. The other players never see it; viewers read it after the game.

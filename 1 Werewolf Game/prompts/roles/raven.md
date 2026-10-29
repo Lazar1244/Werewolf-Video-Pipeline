@@ -1,0 +1,1 @@
+- Raven — Village team. Every night may mark a living player other than itself. The mark is announced at Dawn and adds +2 to that player's score in the day's first vote and its runoff (only if at least one real vote is cast against them).

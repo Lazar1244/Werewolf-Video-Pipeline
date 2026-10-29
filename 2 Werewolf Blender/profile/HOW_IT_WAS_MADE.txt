@@ -1,0 +1,43 @@
+CHANNEL PROFILE PICTURE - HOW IT WAS MADE (2026-10-20)
+======================================================
+A brain in the centre with a red hue around it, in the videos' cel-shaded, ink-outlined style (owner's idea, after a
+reference picture of a pink brain on a blue disc; ours is our own). A separate scene: nothing else changed.
+
+    blender --background --factory-startup --python profile/make_profile.py   (renders out/brain_natural.png, out/brain_glow.png)
+    python profile/finish_profile.py                                           (backgrounds -> out/<n>_<look>_<bg>.png, 800x800)
+
+The brain (make_profile.py)
+- Two hemispheres: UV spheres squashed to (0.6, 1.0, 0.72), flattened on the inner side and underneath, the frontal
+  lobe a little lower and narrower, 0.315 m either side of the middle (the gap is the fissure). A cerebellum at the
+  back underneath (0.52, 0.34, 0.26).
+- The folds are procedural (geometry nodes, after a level-3 subdivision): the position, wobbled by a noise texture,
+  feeds a Wave texture (spherical rings, scale 3.6, distortion 9); its troughs are the creases (map range 0.04-0.3,
+  smoothstep), the rest is pushed out 7 cm along the normals as the rounded folds. The cerebellum gets fine horizontal
+  bands instead. The fold amount is stored as the attribute "fold".
+- Material: cel-shaded (two light bands), the creases darker from "fold"; in the "glow" look the brain is darker and
+  the creases glow red, like circuitry. A black ink outline (an inverted shell, 1.4 cm) as in the videos; it also
+  draws the deepest creases as thin lines.
+- Six dark cables trail down from underneath: the "AI" hint.
+- Light: a warm key from the front left, red spot rims from behind. Rendered at 1600x1600 on a transparent background;
+  the camera frames the brain automatically (centred a little high, about 60% of the width), so the round crop never
+  cuts it.
+
+The backgrounds (finish_profile.py)
+- halo: near-black with a soft red glow behind the brain and a thin red light round its outline.
+- disc: a solid red disc (darker toward its rim) behind the brain, dark outside it.
+Each is scaled to 800x800 (YouTube's size; it shows profile pictures in a circle). out/preview_round.png shows every
+version cropped round, big and at the small sizes YouTube uses (98, 40 and 24 px).
+
+The owner's pick: 1_natural_halo.png.
+
+CHANNEL BANNER (2026-10-20)
+---------------------------
+"MECHANICAL BRAINS AT PLAY" (the owner's slogan) as a red neon sign on near-black, after the owner's "AI NEVER SLEEPS"
+reference; red to match the profile picture.
+    python profile/make_banner.py   -> out/banner.png (2560x1440, upload this), out/banner_preview.png (safe areas
+                                       drawn: blue = what desktop shows, green = what every device shows),
+                                       out/banner_desktop_view.png (as desktop shows it)
+- Font: Bahnschrift SemiBold Condensed (comes with Windows; close to the reference's), as large as fits 1406 px wide
+  (148 px), centred: inside the 1546x423 box every device shows.
+- Neon: a white-hot core (1.0, 0.86, 0.84) on a red tube (1.0, 0.13, 0.09), and four layers of red glow (the letters
+  blurred 3, 12, 34 and 90 px, strengths 1.0, 0.85, 0.7, 0.45; the wide ones x1.6), added up like light.

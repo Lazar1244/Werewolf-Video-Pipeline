@@ -1,0 +1,1 @@
+You are about to die. Say your last words in "speech" (at most {{words}} words). You may reveal anything you like. Set "lean" to the seat you suspect most right now (or null), and "claim" to a role claim you make in this speech ({"role": role id, "result": short text or null}) or null.

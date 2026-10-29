@@ -1,0 +1,19 @@
+{
+  "id": "idiots-gambit-6",
+  "label": "Idiot's Gambit",
+  "category": "recommended",
+  "seats": 6,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "seer",
+    "village_idiot",
+    "raven",
+    "hunter"
+  ],
+  "description": "Loaded votes: each night the Raven secretly adds two votes against a suspect, and the Village Idiot survives the rope. A vote can backfire either way — exactly what bluffing wolves want.",
+  "tags": [
+    "deception",
+    "votes"
+  ]
+}

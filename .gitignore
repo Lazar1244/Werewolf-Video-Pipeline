@@ -1,0 +1,52 @@
+# Secrets
+.env
+**/.env
+
+# Dependencies, builds, caches
+node_modules/
+dist/
+coverage/
+__pycache__/
+*.pyc
+.history/
+.claude/
+
+# Game data, logs, spend
+1 Werewolf Game/data/
+*.db
+*.db-wal
+*.db-shm
+logs/
+*.log
+*.err
+*.out
+3 Werewolf TTS/spend.json
+3 Werewolf TTS/*_state.json
+
+# Finished videos, renders and per-game results (kept locally)
+FullGameFolder/
+Thumbnail inspiration/
+2 Werewolf Blender/out/
+2 Werewolf Blender/games/
+2 Werewolf Blender/profile/out/
+2 Werewolf Blender/thumbnail/Game */
+2 Werewolf Blender/thumbnail/logos/png/
+2 Werewolf Blender/thumbnail/flags/
+3 Werewolf TTS/output/
+3 Werewolf TTS/takes/
+
+# Generated Blender files (rebuilt by the scripts)
+*.blend
+*.blend1
+
+# Audio and video (sounds are re-fetched by sounds/fetch_sounds.py)
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.ogg
+*.flac
+*.m4a
+2 Werewolf Blender/sounds/_source/
+3 Werewolf TTS/listen.html

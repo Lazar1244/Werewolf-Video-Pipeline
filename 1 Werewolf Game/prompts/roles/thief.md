@@ -1,0 +1,1 @@
+- Thief — two extra cards are set aside. On Night 1 the Thief sees them and may swap for one (must take a werewolf card if both are werewolf cards). A Thief who keeps their card becomes a Villager. The unchosen cards are never revealed.

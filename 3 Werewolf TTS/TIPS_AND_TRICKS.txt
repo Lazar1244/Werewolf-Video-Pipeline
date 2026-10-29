@@ -1,0 +1,274 @@
+WEREWOLF TTS - TIPS AND TRICKS (Gemini 3.8 Flash TTS)
+Version 2.1, 2026-10-07. Reviewed by an independent agent: v1 7.5/10, v2 9.2/10; all corrections applied.
+Researched from the sources at the bottom. Every point is marked:
+  [OFFICIAL]   Google's own documentation (ai.google.dev docs, API reference, pricing page)
+  [COOKBOOK]   Google's official Gemini cookbook notebook (Get_Started_Voices); official, but see the conflicts noted
+  [THIRD]      write-ups by other developers (useful, not guaranteed)
+  [OURS]       our own calculation or our own test results (tests are added as we go, with a date)
+  [UNVERIFIED] mentioned somewhere but not confirmed; treat with care
+Where Google's sources disagree, both are given and marked CONFLICT.
+=====================================================================================================
+
+1. THE THREE LAYERS: VOICE, STYLE, TEXT
+-----------------------------------------------------------------------------------------------------
+- Every line is made of three separate things [OFFICIAL]:
+    VOICE = who speaks (a designed voice_... ID, a replicated voice, or a ready-made voice like Kore)
+    STYLE = how the line is delivered (speech_metadata.style, e.g. "whispered urgently")
+    TEXT  = the exact words, spoken verbatim, plus inline tags for momentary sounds
+- The text is a VERBATIM TRANSCRIPT: anything written in it is spoken out loud [OFFICIAL].
+  "Say angrily: get out" would be read out, "say angrily" included. Put delivery into STYLE, never into TEXT.
+- Permanent traits belong in the VOICE; temporary acting belongs in the STYLE [OFFICIAL].
+  Google: avoid putting age, gender, names or permanent accent changes in the style [OFFICIAL]; design a new
+  voice for those instead. (We extend this to timbre as well [OURS, untested].)
+
+2. DESIGNING A VOICE (Voice design)
+-----------------------------------------------------------------------------------------------------
+- Describe the speaker in 1-2 clear sentences [OFFICIAL]. Official examples:
+    "A warm, thoughtful astronomer in his late 60s with a gentle British accent, speaking with quiet wonder." [OFFICIAL]
+    "A world-weary 1940s noir private detective in his late 50s with a gravelly baritone voice, subtle
+     Mid-Atlantic accent, and unhurried, deliberate pacing." [COOKBOOK]
+- What to put in the description:
+    age, gender, timbre, vocal texture, regional accent [OFFICIAL, voice-design page];
+    cadence/pacing, vocal register (pitch), physical texture and resonance, a character archetype [COOKBOOK].
+- Leave OUT of the description: situational emotion (angry, scared, whispering). That is steered later with
+  short styles [OFFICIAL].
+- EVERY DESIGN CALL GIVES A DIFFERENT VOICE: "Each call ... produces a unique voice variation" [COOKBOOK].
+  -> Make 2-3 candidates from the same description and keep the best.
+- A DESIGNED VOICE CANNOT BE REMADE: re-running the same description gives a different voice, and a designed
+  voice cannot be cloned later because "AI-generated voices cannot be used as reference or consent audio" [COOKBOOK].
+  -> For every approved voice keep: the voice ID, the description, its expire_time, the preview WAV and the
+     approved takes. Use each voice regularly so it does not expire.
+- An existing stored voice can be used as a "base_voice" when creating a new one [OFFICIAL, API reference];
+  the TTS docs call this "remixing" [OFFICIAL]. Exact fields and how much it keeps of the original: UNVERIFIED, test before relying on it.
+- Optional region_code field (ISO 3166-1 / UN M.49) on a voice [OFFICIAL, API reference]; it may help pin an
+  accent, but its effect is not documented [UNVERIFIED].
+- The voice comes back with a stored ID (voice_...) and a short preview sample (WAV) [OFFICIAL]. The preview's
+  sentence is chosen by Google; no field to set it is documented [OFFICIAL docs silent].
+- Designed voices must be stored (store=true; the default is false) [OFFICIAL, API reference].
+- LIMITS: max 200 stored voices per project (designed and replicated together) [OFFICIAL]. Unstored replication
+  keys (voicekey_...) last 7 days [OFFICIAL].
+  CONFLICT on how long stored voices last: the docs and API reference say 1 year without use, reset whenever the
+  voice is used for speech or as a base voice [OFFICIAL]; Google's cookbook says stored voices are kept
+  "for 7 days (expire_time)" [COOKBOOK]. -> Always read and record the expire_time returned with each voice.
+- COST of creating a voice: not on the pricing page [OFFICIAL, silent], but CreateVoice returns a "usage" field
+  ("Token usage statistics for the voice creation request") [OFFICIAL, API reference], so creation is metered.
+  -> Log the real usage figure from each creation.
+
+3. STYLE (speech_metadata.style): HOW A LINE IS DELIVERED
+-----------------------------------------------------------------------------------------------------
+- Keep styles SHORT: a few words, e.g. "whispered urgently", "angry tone", "speaking rapidly", "out of breath",
+  "sarcastic", "cheerful and energetic" [OFFICIAL].
+- Recommended order [OFFICIAL]: build the character once, test with an EMPTY style first, then add short styles
+  only for tweaks.
+- Prosody and pitch also go in the style, e.g. "high pitch, cheerful and excited inflection", "monotone and
+  flat" [OFFICIAL].
+- WHEN THE EMOTION CHANGES INSIDE A LINE: split it into separate turns, each with its own style [OFFICIAL]:
+  "If the emotion or prosody shifts mid-dialogue, split the script into separate turns with distinct style values
+  for each turn." (Some authors instead describe an arc inside one style, "start hesitant, build to energetic"
+  [THIRD, no hands-on evidence]; Google's split is the safer method.)
+- Long "Audio Profile" paragraphs and multi-bullet "Director's Notes" (the way older Gemini TTS was prompted)
+  are "the most common cause of voice drift" in 3.8 [OFFICIAL]. Never re-send a long character persona on each
+  turn; let the voice carry the identity [OFFICIAL].
+- Do NOT add instructions like "keep the voice consistent"; extra prompt text increases drift [OFFICIAL].
+- Physical wording instead of generic emotion, e.g. "tight-chested and clipped" instead of "angry" [THIRD, weak
+  source, untested].
+
+4. INLINE TAGS: MOMENTARY SOUNDS AND PAUSES (written inside the text)
+-----------------------------------------------------------------------------------------------------
+- Use angle brackets: <sigh>. Angle brackets give the highest audio quality [OFFICIAL].
+- Documented tags [OFFICIAL list; the grouping below is ours]:
+    pauses:    <short pause>  <long pause>
+    whisper:   <whispers> <whispering>
+    laughter:  <laugh> <laughter> <chuckle> <chuckles> <giggle> <cackle> <snicker>
+    breath:    <breath> <heavy breath> <exhales> <pant> <throat-clearing> <cough>
+    strain:    <gasp> <groan> <growl> <grunt> <grr> <argh> <hiss> <moan> <scream> <shout> <shriek> <whimper> <yawn>
+    emotion:   <cry> <sob> <cheer>
+    other:     <sigh> <sighs> <pff> <phew> <tsk> <snort> <sneeze>
+- Keep tags in English even in non-English text [OFFICIAL].
+- Stick to HUMAN vocal sounds. Google says to avoid sound-effect tags such as applause or thuds [OFFICIAL].
+  -> Our inference: don't rely on this model for campfire crackle, wind or crowd ambience. (The owner saw ambience
+     in AI Studio; that is not covered by these TTS docs and will be checked separately before we plan ambience.)
+- Backchannels in conversation: a listener's reaction inside the other speaker's turn, between pipes, e.g.
+  |oh hmm| (docs) or |uh-huh| (cookbook) [OFFICIAL syntax].
+
+5. PACE, PAUSES AND EMPHASIS
+-----------------------------------------------------------------------------------------------------
+- Three levels of pace control [OFFICIAL]:
+    1) punctuation: commas, dashes (--), ellipses (...) give natural hesitation
+    2) pause tags: <short pause>, <long pause>
+    3) a style for the whole line: "speaking slowly" / "speaking rapidly"
+- CAPITALISE a word to stress it: "I'm voting for YOU." [OFFICIAL]
+- Write natural spoken text, including disfluencies (hesitations, restarts) where they fit [OFFICIAL].
+
+6. DIALOGUE AND SEVERAL SPEAKERS
+-----------------------------------------------------------------------------------------------------
+- Docs: one request can hold at most 2 speakers, and only with ready-made voices [OFFICIAL]; with designed or
+  replicated voices, make each speaker's line separately and join them afterwards [OFFICIAL].
+  CONFLICT: the cookbook shows a designed and a replicated voice together in one multi-speaker request [COOKBOOK].
+  -> Don't depend on it without our own test; our tool makes one request per line per character anyway.
+- In multi-speaker requests every turn must name its speaker [OFFICIAL].
+- JOINING LINES: join the raw 24 kHz PCM, not whole WAV files: either request audio/l16, or strip each WAV header
+  before joining, otherwise headers end up inside the audio [OFFICIAL].
+
+7. FLASH vs FLASH-LITE
+-----------------------------------------------------------------------------------------------------
+- Flash: best fidelity, nuanced acting, heavy use of vocal-burst tags, creative/character work [OFFICIAL].
+  -> our choice for character voices.
+- Flash-Lite: faster and cheaper, for bulk production and voice agents [OFFICIAL]. Both support voice design
+  [OFFICIAL].
+- Languages are detected automatically (Flash 130+, Flash-Lite 100+) [OFFICIAL]; no language setting for speech
+  is documented [OFFICIAL docs silent].
+
+8. AUDIO FORMAT
+-----------------------------------------------------------------------------------------------------
+- A normal (non-streaming) request returns a WAV: 24 kHz, mono, 16-bit little-endian, with a RIFF header
+  [OFFICIAL]. Streaming returns raw PCM (audio/l16) without a header [OFFICIAL]. Don't add a second WAV header
+  [OFFICIAL migration note].
+- Other formats: audio/l16, audio/mulaw, audio/alaw; sample rates 24000, 16000 or 8000 [OFFICIAL].
+  -> Keep 24 kHz WAV for video.
+- Output is reportedly watermarked with SynthID [THIRD]. Fine for posting videos; worth knowing.
+
+9. COST (as of 2026-10-07)
+-----------------------------------------------------------------------------------------------------
+- Flash: $0.50 per 1M text tokens in, $9 per 1M audio tokens out until 2026-12-31; $1 / $18 from 2027-01-01.
+  Flash-Lite: $6 out, then $12 [OFFICIAL pricing page].
+- Batch requests cost half (Flash $0.25 / $4.50 until 2026-12-31) and suit offline video work; a free tier
+  also exists [OFFICIAL pricing page].
+- Google counts 25 audio tokens per second of speech [OFFICIAL]; one developer measured about 32 per second on
+  3.8 Flash [THIRD]. Our tool assumes 32 so estimates stay on the safe side.
+- One line (about 5-10 s) costs roughly $0.0014-0.003 on Flash, double from 2027-01-01 [OURS, derived].
+
+10. VOICE REPLICATION (cloning a real voice) - for reference only; we design voices instead
+-----------------------------------------------------------------------------------------------------
+- Needs a reference recording AND a consent recording of one fixed consent statement, in English:
+  "I am the owner of this voice and I consent to Google using this voice to create a synthetic voice model."
+  [COOKBOOK]. It is available in 25 language versions [THIRD]; a press piece says 30 locales [THIRD].
+- Record both in the same acoustic environment, with the same microphone in the same room [COOKBOOK].
+- Reference length: sources differ, roughly 10-30 s (15-20 s natural speech [THIRD]; "short", with a 6+ s studio consent recording used as both reference and consent
+  [COOKBOOK]).
+- Not available in some regions, reportedly including the EEA, UK, Switzerland, India, Illinois and Texas
+  [THIRD, UNVERIFIED].
+
+11. MORE VOICES TO TRY BEFORE DESIGNING
+-----------------------------------------------------------------------------------------------------
+- 30 ready-made studio voices plus an Extended Voice Library of "hundreds of additional voices", searchable by
+  persona, pitch, accent, context, gender, language_code, region_code and type [OFFICIAL]; it can also be browsed
+  and auditioned in AI Studio [OFFICIAL]. They have no expire_time (the TTL applies to custom voices) and, as
+  prebuilt voices, should work in 2-speaker requests [OFFICIAL, inferred from two statements].
+  Our tool lists them: python tts.py voices --search ...
+
+12. OUR WORKING METHOD (how we use all this for the Werewolf characters)
+-----------------------------------------------------------------------------------------------------
+- One designed voice per character = the stable identity. Describe permanent traits only. Make 2-3 candidates.
+- Test the plain voice first (empty style), then short styles per situation.
+- Situations differ per role: the same voice may need a different short style as a villager defending himself
+  than as a secret werewolf's inner monologue. Each approved situation keeps its own final style.
+- If a style starts to change WHO the voice is (age, accent), stop: that is a voice-design change, not a style.
+- Keep transcripts clean: no stage directions in the text; tags only for momentary sounds and pauses.
+- Archive every approved voice: ID, description, expire_time, preview, approved styles and takes.
+
+13. FROM OUR OWN TESTS
+-----------------------------------------------------------------------------------------------------
+(to be filled as we calibrate; each point marked [OURS] with the date)
+- 2026-10-07 [OURS] Stored designed voices came back with expire_time exactly 1 year ahead: this settles the
+  CONFLICT in section 2 in favour of the docs (1 year), at least for designed voices.
+- 2026-10-07 [OURS] Voice design billed 810 audio tokens for a 32.4 s preview = 25 tokens per second (Google's figure),
+  plus 77 text-in and 175 "thought" tokens. Our 32/s estimate is therefore about 25% on the safe side.
+- 2026-10-07 [OURS] The preview sample is long (18-32 s) and can peak at full scale (1.00), so check its levels
+  before using it anywhere.
+- 2026-10-07 [OURS] A harmless description ("sharp, wiry man ... slightly nasal tenor ... Northern English
+  accent") was refused: "Generated voice prompt was flagged by safety policies" (HTTP 400, nothing charged).
+  Rewording it ("wiry, restless ... lean, bright tenor ...") went through. If a design is refused, rephrase
+  rather than give up.
+- 2026-10-07 [OURS] Lars (first character): for a neutral line (opening words) the owner preferred the voice with
+  NO style over "calm, measured, a little guarded". Matches the official advice to test plain first: for calm,
+  everyday lines, start without a style. Emotional and role-specific lines (accusing, scared, whispers, inner
+  monologue, lies) were all approved first time with short 3-6 word styles.
+- 2026-10-07 [OURS] Cora (second character): the opposite of Lars. Her designed voice (low, smoky, "slow,
+  deliberate") came out monotone and whispery with NO style. A projecting style fixed the neutral line:
+  "speaking up clearly to the whole circle, full voice, confident". Lesson: soft, low or slow voice designs need
+  a projecting style even for calm lines; bright voices can go without one.
+- 2026-10-07 [OURS] Conviction (Cora as Sheriff): "warm, proud, rallying" was too mild. What worked was a stronger
+  style ("firm and determined, full of conviction") TOGETHER with stress on one word in capitals ("I WILL find
+  them"). Giving 2 options per redo let the owner choose in one round.
+- 2026-10-07 [OURS] BLIND TEST, tips vs. no tips (Alba): three voice ideas, each made two ways, randomly labelled;
+  the owner judged without knowing which was which.
+    Tips way:  1-2 sentence description of permanent traits; no style on the plain line; a short 5-word style.
+    My way:    a rich persona (personality, backstory, emotional reactions) + long director-style acting notes.
+  Result: the owner chose the TIPS version of the winning idea (A). For idea C the tips version was also better:
+  it only lost its Scottish accent on the emotional line, while the no-tips version was worse and inconsistent
+  between its two lines (it sounded like different people). This matches the official warning that long
+  persona/director text causes drift. -> We keep following the tips.
+- 2026-10-07 [OURS] An emotional style can wash out an accent (Alba C, Scottish, "defensive and frustrated, voice
+  rising"). Listen for accent loss in every emotional situation.
+- 2026-10-07 [OURS] Accent strength in the DESIGN decides whether it survives emotion (Pavel, French): "a strong
+  French accent" kept the accent on the emotional line; "a noticeable French accent" lost it. When an accent
+  matters, write "strong" (or "thick") into the description rather than adding it to the style.
+- 2026-10-07 [OURS] FIX FOR ACCENT LOSS (Pavel, French): quiet, smooth and whispered styles (calm lie, guilty
+  defending, night whisper, inner thoughts) lost the accent even with "strong French accent" in the design.
+  Adding ", strong French accent" at the END of the situation's style brought it back (3 of 3 approved).
+  A shorter style without naming the accent did NOT help. Google advises against CHANGING an accent in the style;
+  re-stating the accent the voice already has works and does not change who the voice is.
+- 2026-10-07 [OURS] "a quiet inner thought" pulls the voice into a breathy near-whisper where an accent is hardest
+  to hold; even with the accent named it was rejected for Pavel.
+- 2026-10-07 [OURS] What finally kept the accent in an inner monologue (Pavel, after 3 rounds): the same formula
+  as the approved night whisper: "whispering to himself, cold and calculating, strong French accent".
+  Rejected: "a quiet inner thought, ..." (with and without the accent), "speaking low", "thinking aloud to
+  himself", "cold, measured and unhurried", "speaking English with a heavy French accent", "whispered, cold and
+  deliberate, thick French accent". -> For accented voices, write thoughts as "whispering to himself/herself,
+  <mood>, strong <X> accent".
+- 2026-10-07 [OURS] DAILY LIMIT: our key is on Tier 1, which allows 100 requests per day for gemini-3.8-flash-tts
+  (HTTP 429 "Rate limit exceeded ... 100 requests per day on Tier 1", with the time until it frees up). Voice
+  designs and speech both count, and refused requests seem to count too, so don't hammer retries. Plan about
+  25-30 calls per character, i.e. 3 characters a day on Tier 1, or ask Google for a higher tier
+  (https://ai.dev/rate-limit).
+- 2026-10-08 [OURS] OPENROUTER CANNOT USE OUR DESIGNED VOICES (tested, see "4 OpenRouter TTS test"): its voice field
+  takes only ready-made names; a voice_... ID passed through provider options is ignored (with the woman's voice
+  Kore as placeholder, a woman spoke). Identical OpenRouter requests were also randomly accepted or refused.
+  -> Character voices only through our own Google key.
+  Follow-up: OpenRouter has no voice-creation endpoint (/api/v1/voices = 404) and refuses every request without one
+  of its ready-made voices; it cannot create, keep or use designed voices.
+- 2026-10-12 [OURS] Naming the accent in quiet styles is NOT a universal rule. It fixed Pavel (French), but for
+  Greta (Russian), Bram (Dutch) and Tilde (Finnish) it made the whispers/thoughts MORE accented than their normal
+  lines (inconsistent, "too much accent"). Their 09-11 were redone without the accent in the style. Rule: add the
+  accent to quiet styles only for a character whose accent actually fades there; check per character by ear.
+- 2026-10-12 [OURS] The owner heard "long pause" spoken in some combined-request takes (e.g. Rhea's gallows line):
+  the "<long pause> <long pause>" separator between lines can apparently be read out instead of performed.
+  For real video lines, don't rely on that separator; send lines one by one or find a safer separator first.
+- 2026-10-15 [OURS] SAFE BATCHING FOR VIDEO LINES (voice_batch.py): no pause tags at all. Each line is its own text part
+  with its own style in one request (up to 8 lines / ~110 words of one voice). A Gemini TEXT model (gemini-3.8-flash,
+  its own request limit, so the speech quota is untouched) reports where each line starts and ends; the cut is snapped
+  to the nearest silence, and every piece is transcribed and must match its line (else it is redone alone). A whole
+  6-player game: 55 lines in 13 speech requests, all checked, about $0.11. The transcriber also confirmed the old
+  separator problem: Rhea's batch said "Long pause. Long pause." between every line.
+- 2026-10-07 [OURS] A voice design can fail once and pass on an identical retry (Alba C2): retry once before
+  rewording. Failed calls are not charged.
+- 2026-10-07 [OURS] Keep the exact approved take rather than regenerating it: every generation differs slightly,
+  so an approved take is copied, not remade.
+- To test early: how much the same line varies from take to take (no temperature or seed setting is
+  documented) [OURS, planned].
+
+SOURCES
+-----------------------------------------------------------------------------------------------------
+- Google, "Text-to-speech generation (TTS)": https://ai.google.dev/gemini-api/docs/speech-generation
+- Google, "Voice design": https://ai.google.dev/gemini-api/docs/voice-design
+- Google, Voices API reference: https://ai.google.dev/api/voices
+- Google, Gemini API pricing: https://ai.google.dev/gemini-api/docs/pricing
+- Google Gemini cookbook, Get_Started_Voices notebook:
+  https://github.com/google-gemini/cookbook/blob/main/quickstarts/Get_Started_Voices.ipynb
+- Philipp Schmid, "Create your own voice for Gemini 3.8 TTS": https://www.philschmid.de/gemini-3-8-tts
+- Guillaume Laforge, "Gemini 3.8 Flash TTS ... Interactions Java SDK":
+  https://glaforge.dev/posts/2026/09/24/gemini-3-8-flash-tts-and-custom-voices-with-the-interactions-java-sdk/
+- "Gemini 3.8 Text-to-Speech: Use It Right": https://www.qwe.edu.pl/tutorial/gemini-3-8-text-to-speech-guide/
+- "Directing Gemini 3.8 Flash TTS With Text Prompts" (no hands-on evidence; used only for untested ideas):
+  https://cogitodaily.com/articles/directing-gemini-3-8-flash-tts-with-text-prompts
+- MxChat, measured tokens per second: https://mxchat.ai/gemini-tts-pricing-tokens-per-second/
+- 2026-10-22 [OURS] The owner moved the key to the PAID Tier 1; the 100-requests-a-day cap seems to be gone (not
+  confirmed: if a 429 names a daily limit during the Game 2 voicing, note it here). Budget in config.json: $10.
+- 2026-10-22 [OURS] VOICES BELONG TO MODELS (owner): a model keeps one character voice in every video so long-term
+  viewers recognise it. The cast is '2 Werewolf Blender/voice_cast.json' (model short name -> locked voice); the
+  episode writes each seat's voice and every voicing tool uses it (spoken.line). New model: its seat's voice, or an
+  unused one, added to the file automatically.
+- 2026-10-23 [OURS] CONFIRMED: on the PAID Tier 1 the 100-a-day cap is gone: Game 2's whole episode (205 beats,
+  about 60 speech requests in one run) met no 429. Cost: about $0.38 for 21.7 min of speech. One beat (a pack line)
+  came back unvoiced with no error; re-running voice_batch.py fills only the missing ones (free for the rest).

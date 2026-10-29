@@ -1,0 +1,1 @@
+- Big Bad Wolf — Werewolf team (wolf nature). Takes part in the pack's kill, and additionally kills a second victim (a non-wolf) each night, as long as no wolf has died yet.

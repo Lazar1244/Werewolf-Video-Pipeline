@@ -1,0 +1,519 @@
+{
+  "name": "Alba",
+  "kind": "player",
+  "gender": "female",
+  "candidates": [
+    {
+      "label": "A1",
+      "voice": "voice_vmirzs4xdrfw",
+      "description": "A young woman in her early 20s with a bright, clear light-soprano voice, a soft Spanish accent, and a lively, quick pace.",
+      "created": "2026-10-07",
+      "expire_time": "2027-10-07T21:08:41.172408394Z",
+      "usage": {
+        "total_tokens": 927,
+        "total_input_tokens": 246,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 96
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 681,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 681
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 1174,
+        "raw_prompt_token": 409,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 259
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 686
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1174
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 259
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 686
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1174
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "A2",
+      "voice": "voice_s2z83lmuwlxn",
+      "description": "Alba is the baker's daughter, barely twenty, the kind of girl who greets everyone by name and still believes the best of her neighbours. Her voice is bright and sweet, a clear light soprano with a soft Spanish warmth, quick and bubbly when she is happy, but it trembles and climbs when she is frightened, and she talks faster the more nervous she gets.",
+      "created": "2026-10-07",
+      "expire_time": "2027-10-07T21:09:21.856046564Z",
+      "usage": {
+        "total_tokens": 966,
+        "total_input_tokens": 288,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 138
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 678,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 678
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 948,
+        "raw_prompt_token": 451,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 301
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 683
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 948
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 301
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 683
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 948
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "B1",
+      "voice": "voice_mkxinhmk8dfv",
+      "description": "Alba is the village herbalist, a woman in her forties who has nursed half the village through winter fevers. She speaks softly and breathily in a low, warm voice with a gentle Welsh lilt, never rushing, as if calming a sick child; when she is crossed, that softness turns cold and quiet rather than loud.",
+      "created": "2026-10-07",
+      "expire_time": "2027-10-07T21:09:56.421477288Z",
+      "usage": {
+        "total_tokens": 1377,
+        "total_input_tokens": 247,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 97
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1130,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1130
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 94,
+        "raw_prompt_token": 410,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 260
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1135
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 94
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 260
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1135
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 94
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "B2",
+      "voice": "voice_e8s0rk0roka4",
+      "description": "A woman in her mid 40s with a breathy, warm low-mid voice, a gentle Welsh lilt, and an unhurried, soothing cadence.",
+      "created": "2026-10-07",
+      "expire_time": "2027-10-07T21:10:43.359163030Z",
+      "usage": {
+        "total_tokens": 2161,
+        "total_input_tokens": 228,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 78
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1933,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1933
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 148,
+        "raw_prompt_token": 391,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 241
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1938
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 148
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 241
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1938
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 148
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "C1",
+      "voice": "voice_jb8mbrjt9h98",
+      "description": "A woman in her mid 60s with a thin, reedy, slightly sharp voice, a crisp Scottish accent, and a brisk, clipped pace.",
+      "created": "2026-10-07",
+      "expire_time": "2027-10-07T21:11:12.375017776Z",
+      "usage": {
+        "total_tokens": 709,
+        "total_input_tokens": 225,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 75
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 484,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 484
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 104,
+        "raw_prompt_token": 388,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 238
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 489
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 104
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 238
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 489
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 104
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "C2",
+      "voice": "voice_lx2hyg7hlaja",
+      "description": "Alba is an old widow in her sixties who trusts no one and has an opinion about everybody. Her voice is thin, reedy and sharp as a needle, with a crisp Scottish accent; she talks briskly, clips her words short, snaps when annoyed and lets out dry little scoffs when someone says something foolish.",
+      "created": "2026-10-07",
+      "expire_time": "2027-10-07T21:12:03.153997717Z",
+      "usage": {
+        "total_tokens": 647,
+        "total_input_tokens": 259,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 109
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 388,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 388
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 147,
+        "raw_prompt_token": 422,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 272
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 393
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 147
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 272
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 393
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 147
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "voice": "voice_vmirzs4xdrfw",
+  "locked": true,
+  "base_style": "",
+  "notes": "",
+  "voice_description": "A young woman in her early 20s with a bright, clear light-soprano voice, a soft Spanish accent, and a lively, quick pace.",
+  "approved": {
+    "accuse": {
+      "take": 19,
+      "style": "firm and pointed, rising intensity",
+      "text": "Soren, you've dodged every question tonight. <short pause> Twice you changed your story. I'm voting for YOU.",
+      "folder": "output\\Alba\\02 Villager - Accusing someone"
+    },
+    "defend": {
+      "take": 20,
+      "style": "defensive and frustrated, voice rising",
+      "text": "That's not fair! I've given you every reason I had. <breath> If you vote me out, you're doing the wolves' work for them.",
+      "folder": "output\\Alba\\03 Villager - Defending herself"
+    },
+    "fear": {
+      "take": 21,
+      "style": "shaky and scared, speaking fast",
+      "text": "Wait, wait <gasp> you've got it wrong! I swear I'm not one of them, ask Oda!",
+      "folder": "output\\Alba\\04 Villager - Scared when accused"
+    },
+    "sheriff": {
+      "take": 22,
+      "style": "warm, proud, rallying",
+      "text": "Thank you. I'll carry this star with care <short pause> and I'll find them. I promise.",
+      "folder": "output\\Alba\\05 Villager - Elected Sheriff"
+    },
+    "lastwords": {
+      "take": 23,
+      "style": "resigned and heavy, slow",
+      "text": "So this is how it ends. <sigh> Remember my name when the wolves come for you.",
+      "folder": "output\\Alba\\06 Villager - Last words at the gallows"
+    },
+    "lie": {
+      "take": 24,
+      "style": "smooth and confident, slightly too relaxed",
+      "text": "Me? I slept like a stone. <chuckle> Honestly, I'm as lost as the rest of you.",
+      "folder": "output\\Alba\\07 Werewolf - Calm lie in public"
+    },
+    "guiltydefend": {
+      "take": 25,
+      "style": "controlled, wounded innocence, a little too smooth",
+      "text": "Think about it. <short pause> If I were a wolf, would I really be the one asking all the questions?",
+      "folder": "output\\Alba\\08 Werewolf - Defending herself while guilty"
+    },
+    "packwhisper": {
+      "take": 26,
+      "style": "whispered urgently, conspiratorial",
+      "text": "Listen. <short pause> They're watching Soren. We take Oda tonight, and tomorrow I point them somewhere else.",
+      "folder": "output\\Alba\\09 Werewolf - Night whisper to the pack"
+    },
+    "wolfthought": {
+      "take": 27,
+      "style": "a quiet inner thought, cold and calculating",
+      "text": "If I push too hard, they'll see it... <long pause> Patience. Let them turn on each other.",
+      "folder": "output\\Alba\\10 Werewolf - Inner monologue"
+    },
+    "seerthought": {
+      "take": 28,
+      "style": "a quiet inner thought, uneasy",
+      "text": "I looked into Soren's soul last night... <short pause> nothing. So who is lying to us?",
+      "folder": "output\\Alba\\11 Special role - Seer inner thought"
+    },
+    "seerreveal": {
+      "take": 29,
+      "style": "urgent and grave, forceful",
+      "text": "I'm the Seer. <short pause> Last night I looked at Oda... and I saw a WOLF.",
+      "folder": "output\\Alba\\12 Special role - Seer revealing what she saw"
+    },
+    "intro": {
+      "take": 2,
+      "style": "",
+      "text": "I'm Alba. I don't have much to go on yet, so I'll listen first <short pause> and speak when something doesn't add up.",
+      "folder": "output\\Alba\\01 Villager - Opening words"
+    }
+  },
+  "locked_at": "2026-10-07"
+}

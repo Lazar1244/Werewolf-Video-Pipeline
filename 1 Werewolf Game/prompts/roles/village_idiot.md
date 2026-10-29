@@ -1,0 +1,1 @@
+- Village Idiot — Village team. If the village votes to execute the Idiot, their role is revealed and they survive, but they can never vote again. Dies normally at night.

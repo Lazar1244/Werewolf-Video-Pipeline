@@ -1,0 +1,19 @@
+{
+  "id": "classic-7",
+  "label": "Classic 7",
+  "category": "classic",
+  "seats": 7,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "seer",
+    "witch",
+    "hunter",
+    "villager",
+    "villager"
+  ],
+  "description": "The standard first game: Seer, Witch and a Hunter who shoots back when killed.",
+  "tags": [
+    "beginner"
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "name": "Lars",
+  "kind": "player",
+  "gender": "male",
+  "candidates": [
+    {
+      "label": "A",
+      "voice": "voice_ry0fem0iqshe",
+      "description": "A gruff, weathered fisherman in his late 40s with a deep, gravelly baritone, a faint Scandinavian accent, and slow, deliberate speech.",
+      "created": "2026-10-07",
+      "expire_time": "2027-10-07T20:43:23.106021443Z",
+      "usage": {
+        "total_tokens": 1037,
+        "total_input_tokens": 227,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 77
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 810,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 810
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 175,
+        "raw_prompt_token": 390,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 240
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 815
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 175
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 240
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 815
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 175
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "B",
+      "voice": "voice_xwxl6rifb4u9",
+      "description": "A wiry, restless man in his early 30s with a lean, bright tenor voice, a crisp Northern English accent, and quick pacing.",
+      "created": "2026-10-07",
+      "expire_time": "2027-10-07T20:44:17.361363905Z",
+      "usage": {
+        "total_tokens": 698,
+        "total_input_tokens": 244,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 94
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 454,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 454
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 464,
+        "raw_prompt_token": 407,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 257
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 459
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 464
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 257
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 459
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 464
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "C",
+      "voice": "voice_ofxqdbxck4tj",
+      "description": "A calm, soft-spoken village carpenter in his 50s with a warm, husky mid-range voice, a light Nordic lilt, and a measured, gentle cadence.",
+      "created": "2026-10-07",
+      "expire_time": "2027-10-07T20:44:44.876680002Z",
+      "usage": {
+        "total_tokens": 879,
+        "total_input_tokens": 221,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 71
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 658,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 658
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 834,
+        "raw_prompt_token": 384,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 234
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 663
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 834
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 234
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 663
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 834
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "voice": "voice_xwxl6rifb4u9",
+  "locked": true,
+  "base_style": "",
+  "notes": "",
+  "voice_description": "A wiry, restless man in his early 30s with a lean, bright tenor voice, a crisp Northern English accent, and quick pacing.",
+  "approved": {
+    "intro": {
+      "take": 6,
+      "style": "",
+      "folder": "output/Lars/01 Villager - Opening words"
+    },
+    "accuse": {
+      "take": 11,
+      "style": "firm and pointed, rising intensity",
+      "folder": "output/Lars/02 Villager - Accusing someone"
+    },
+    "defend": {
+      "take": 12,
+      "style": "defensive and frustrated, voice rising",
+      "folder": "output/Lars/03 Villager - Defending himself"
+    },
+    "fear": {
+      "take": 13,
+      "style": "shaky and scared, speaking fast",
+      "folder": "output/Lars/04 Villager - Scared when accused"
+    },
+    "sheriff": {
+      "take": 14,
+      "style": "warm, proud, rallying",
+      "folder": "output/Lars/05 Villager - Elected Sheriff"
+    },
+    "lastwords": {
+      "take": 15,
+      "style": "resigned and heavy, slow",
+      "folder": "output/Lars/06 Villager - Last words at the gallows"
+    },
+    "lie": {
+      "take": 16,
+      "style": "smooth and confident, slightly too relaxed",
+      "folder": "output/Lars/07 Werewolf - Calm lie in public"
+    },
+    "guiltydefend": {
+      "take": 17,
+      "style": "controlled, wounded innocence, a little too smooth",
+      "folder": "output/Lars/08 Werewolf - Defending himself while guilty"
+    },
+    "packwhisper": {
+      "take": 18,
+      "style": "whispered urgently, conspiratorial",
+      "folder": "output/Lars/09 Werewolf - Night whisper to the pack"
+    },
+    "wolfthought": {
+      "take": 19,
+      "style": "a quiet inner thought, cold and calculating",
+      "folder": "output/Lars/10 Werewolf - Inner monologue"
+    },
+    "seerthought": {
+      "take": 20,
+      "style": "a quiet inner thought, uneasy",
+      "folder": "output/Lars/11 Special role - Seer inner thought"
+    },
+    "seerreveal": {
+      "take": 21,
+      "style": "urgent and grave, forceful",
+      "folder": "output/Lars/12 Special role - Seer revealing what he saw"
+    }
+  },
+  "situation_styles": {
+    "intro": "",
+    "accuse": "firm and pointed, rising intensity",
+    "defend": "defensive and frustrated, voice rising",
+    "fear": "shaky and scared, speaking fast",
+    "sheriff": "warm, proud, rallying",
+    "lastwords": "resigned and heavy, slow",
+    "lie": "smooth and confident, slightly too relaxed",
+    "guiltydefend": "controlled, wounded innocence, a little too smooth",
+    "packwhisper": "whispered urgently, conspiratorial",
+    "wolfthought": "a quiet inner thought, cold and calculating",
+    "seerthought": "a quiet inner thought, uneasy",
+    "seerreveal": "urgent and grave, forceful"
+  },
+  "locked_at": "2026-10-07"
+}

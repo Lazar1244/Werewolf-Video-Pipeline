@@ -1,0 +1,20 @@
+{
+  "id": "big-bad-wolf-8",
+  "label": "Big Bad Wolf",
+  "category": "recommended",
+  "seats": 8,
+  "cards": [
+    "big_bad_wolf",
+    "werewolf",
+    "seer",
+    "witch",
+    "hunter",
+    "protector",
+    "villager",
+    "villager"
+  ],
+  "description": "While no wolf has died, the Big Bad Wolf kills a second victim each night. The village must find a wolf fast.",
+  "tags": [
+    "wolves"
+  ]
+}

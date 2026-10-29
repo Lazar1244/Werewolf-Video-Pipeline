@@ -1,0 +1,18 @@
+{
+  "id": "classic-6",
+  "label": "Classic 6",
+  "category": "classic",
+  "seats": 6,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "seer",
+    "witch",
+    "villager",
+    "villager"
+  ],
+  "description": "Two wolves against a Seer and a Witch. The Witch's two potions decide many games.",
+  "tags": [
+    "beginner"
+  ]
+}

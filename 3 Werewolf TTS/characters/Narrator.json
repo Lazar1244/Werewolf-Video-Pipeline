@@ -1,0 +1,261 @@
+{
+  "name": "Narrator",
+  "kind": "narrator",
+  "gender": null,
+  "candidates": [
+    {
+      "label": "A",
+      "voice": "voice_r7gpjkxb23vg",
+      "description": "A deep, resonant storyteller in his 60s with a rich bass-baritone voice, a neutral British accent, and slow, dramatic pacing.",
+      "created": "2026-10-08",
+      "expire_time": "2027-10-08T09:26:47.500038003Z",
+      "usage": {
+        "total_tokens": 1808,
+        "total_input_tokens": 290,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 140
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1518,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1518
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 150,
+        "raw_prompt_token": 453,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 303
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1523
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 150
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 303
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1523
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 150
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "B",
+      "voice": "voice_5bkx29fa89vf",
+      "description": "A grave storyteller in his 50s with a dark, smoky baritone voice, a soft Scottish accent, and an unhurried, ominous cadence.",
+      "created": "2026-10-08",
+      "expire_time": "2027-10-08T09:27:16.782663861Z",
+      "usage": {
+        "total_tokens": 880,
+        "total_input_tokens": 230,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 80
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 650,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 650
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 837,
+        "raw_prompt_token": 393,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 243
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 655
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 837
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 243
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 655
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 837
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "C",
+      "voice": "voice_30208vopx3f8",
+      "description": "A wise old woman storyteller in her 70s with a low, warm, slightly rasping voice, a neutral British accent, and a slow, haunting cadence.",
+      "created": "2026-10-08",
+      "expire_time": "2027-10-08T09:27:45.236499837Z",
+      "usage": {
+        "total_tokens": 1341,
+        "total_input_tokens": 218,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 68
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1123,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1123
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 108,
+        "raw_prompt_token": 381,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 231
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1128
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 108
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 231
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1128
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 108
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "voice": "voice_5bkx29fa89vf",
+  "locked": true,
+  "base_style": "",
+  "notes": "Titles, captions, deaths and votes.",
+  "voice_description": "A grave storyteller in his 50s with a dark, smoky baritone voice, a soft Scottish accent, and an unhurried, ominous cadence.",
+  "approved": {
+    "nightfall": {
+      "take": 10,
+      "style": "a storyteller at a campfire, low, slow and ominous",
+      "text": "Night one. <short pause> The village falls asleep... and in the dark, something stirs.",
+      "folder": "output\\Narrator\\01 Narrator - Night falls"
+    },
+    "dawn": {
+      "take": 11,
+      "style": "dread, quiet and heavy",
+      "text": "Dawn. <short pause> A cry rises from the square. Viggo was the Witch... killed by the pack.",
+      "folder": "output\\Narrator\\03 Narrator - Dawn and a death"
+    },
+    "verdict": {
+      "take": 12,
+      "style": "grave and formal",
+      "text": "The village has decided. <short pause> Jonas climbs the gallows.",
+      "folder": "output\\Narrator\\04 Narrator - The village decides"
+    },
+    "pack": {
+      "take": 13,
+      "style": "hushed and menacing",
+      "text": "Deep in the forest, the pack gathers. <long pause> They have chosen... Viggo.",
+      "folder": "output\\Narrator\\02 Narrator - The pack chooses"
+    },
+    "victory": {
+      "take": 14,
+      "style": "triumphant and grand",
+      "text": "The last wolf has fallen. <long pause> The village survives... for now.",
+      "folder": "output\\Narrator\\05 Narrator - The end of the game"
+    }
+  },
+  "locked_at": "2026-10-12"
+}

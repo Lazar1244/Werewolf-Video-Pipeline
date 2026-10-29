@@ -1,0 +1,290 @@
+THUMBNAILS - HOW THEY WERE MADE (Game 1, game 3880b590, 2026-10-19)
+=====================================================================
+
+What they are
+-------------
+1280x720 PNGs in the style of the popular "AIs play Mafia" videos: a giant red 3D title behind a row of six
+contestants on a glowing red grid floor in red fog, with a dead body lying in front. The contestants are the video's
+own hooded figures (same models as the episode), each with its seat colour on the hood and its lab's real logo glowing
+on the chest. Every number below is in the scripts; nothing was painted by hand.
+
+Main pick (owner): 5_questions  -  WEREWOLF + five small white tilted questions.
+Alternatives:      1_werewolf, 2_whos_the_wolf (with texts, like the main one), 3_two_are_lying (two pairs of red wolf eyes in the fog),
+                   (3_two_are_lying also with texts), 4_blood_moon (a huge red moon behind the row).
+
+Where everything lives
+----------------------
+2 Werewolf Blender/thumbnail/
+    make_thumbnails.py    builds the scene in Blender and renders every version (Game 1/<name>.png; the plain
+                          renders that get texts on top go to Game 1/bases/<name>_base.png)
+    add_questions.py      draws the small white texts onto Game 1/bases/<name>_base.png -> Game 1/<name>.png
+                          (5_questions, 2_whos_the_wolf, 3_two_are_lying)
+    rasterize_logos.py    logos/*.svg -> 1024 px transparent PNGs (headless Microsoft Edge)
+    prep_logos.py         cleans those PNGs -> logos/png/<lab>.png (what Blender uses)
+    logos/                the downloaded SVGs + SOURCES.txt (links, sizes, licences)
+    Game 1/               this episode's thumbnails (GAME in make_thumbnails.py / OUT in add_questions.py names
+                          the folder: use a new one per game)
+    thumbnails.blend      the scene as last rendered (open it to tweak by hand)
+It reuses the village kit: village/figures.py (the hooded figures), village/common.py (toon/glow materials, fog,
+lights, the ink outline), village/intro_stages.py (glow_finish: soft glow on bright things + vignette).
+
+How to rebuild (from "2 Werewolf Blender")
+------------------------------------------
+1. Logos (only if the SVGs change). Run this one from PowerShell (the sandboxed bash shell can't start Edge):
+       python thumbnail/rasterize_logos.py <temp folder>
+       python thumbnail/prep_logos.py <temp folder>
+2. Render (about 5 s per version on the RTX 2080):
+       "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" --background --factory-startup --python thumbnail/make_thumbnails.py
+   or just some versions:  ... make_thumbnails.py -- 5_questions_base 2_whos_the_wolf_base 3_two_are_lying_base 1_werewolf
+3. Texts (all three texted versions):
+       python thumbnail/add_questions.py
+
+The scene (make_thumbnails.py, build())
+---------------------------------------
+- World: flat dark red (0.07, 0.004, 0.006).
+- Floor: an 80 m black toon plane; the grid is thin glowing red bars (0.9, 0.08, 0.06; strength 1.3) every 1.2 m
+  in both directions, running to the horizon.
+- Cast: six standing figures (seats 1-6 = Sol, Fable, Gemini, Grok, Astra, Opus), scale 1.5, in a shallow arc at
+  x = -3.6 -2.2 -0.75 0.75 2.2 3.6, each turned slightly toward the camera. Seat colours on the hoods.
+- Logos: GPT-6 Sol / GPT-6 Astra -> OpenAI, Claude Fable / Claude Opus -> Claude, Gemini -> Gemini, Grok -> Grok.
+  Each is a square decal (0.46 m before the 1.5 figure scale) parented to the figure at chest height
+  (local 0.033*x, 0.37, 0.92: nudged inward at the row's edges so the wide lens shows it centred under the hood), image texture -> emission (OpenAI and Grok 1.5, Claude 1.15, Gemini 1.25) mixed with
+  transparent by the image's alpha, material render method BLENDED. UVs run along local -x so the logos are not
+  mirrored (the figures face the camera).
+- The body: a seventh figure (purple scarf) lying across the front at (0.7, -0.45), scale 1.4, in a wet red pool
+  (a faint red glow (0.42, 0, 0.008) at 0.75 so it reads on the black floor). The village's body pose lies flat on
+  its back, which this low camera sees edge-on, so here it is tipped 22 deg toward the camera (BODY_TIP, about the
+  world x axis after its 92 deg yaw); its own small pool is hidden (it would tip up into the air); the X eyes are
+  doubled and set 5 cm further apart (so they read as two), and the claw tears made bright red and thicker. grow() scales a mesh about its own centre because those
+  parts pivot at the head (scaling the object would push them off the face). Only the thumbnail does this: the
+  village's figures.py is unchanged.
+- Light: a warm area key from the front (900 W), two hard red spot rims from behind (3500 W each).
+- Fog: a red volume (0.7, 0.06, 0.05), thicker near the ground, behind and around the row.
+- Camera: at (0, -8.2, 2.4) looking at (0, 2, 2.55), 28 mm lens, slightly below eye level so the cast looms.
+- Render: EEVEE, 48 samples, Standard view transform, 1280x720.
+
+The title (why it looks sharp)
+------------------------------
+The first versions rendered the title inside the scene, so the fog and the glow softened its edges (owner: "foggy
+with non clear outlines"). Now each version renders in two passes:
+1. The scene without the title, then glow_finish (soft glow + vignette).
+2. The title alone: same camera and lights, no fog, transparent background, at 200% size, then scaled down 2x2
+   (alpha-weighted) for a clean anti-aliased edge.
+Then, in numpy: a dark ink outline (the title's shape grown by ~4 px), a soft red halo behind it (that outline
+blurred, 55%), and the title laid on top.
+Title: Impact, letter spacing 1.04, extruded 0.32, bevel 0.035, face red glow (1.0, 0.06, 0.035) at 0.9, dark red toon sides, plus a dark
+copy 3.5% bigger set just behind and down-right as a hard drop shadow. Sizes: WEREWOLF 3.6 (2.9 in the questions
+version, raised to z 5.25 to free room), WHO'S THE WOLF? 2.6, 2 ARE LYING 3.0.
+
+The questions (add_questions.py)
+--------------------------------
+White Impact, black outline (size/12 px), soft dark drop shadow, each tilted a few degrees:
+    WHO'S LYING?      left, beside the title         46 px, +8 deg
+    CAN AI LIE?       right, beside the title        46 px, -8 deg   (the "AI" hook)
+    CLAUDE FABLE      above Fable (seat 2)           40 px, +5 deg   (owner: the best-known models, for those who know)
+    GPT ASTRA         above Astra (seat 5)           40 px, -5 deg
+    WHO KILLED HIM?   bottom left                    44 px, +5 deg, a curved white arrow (9 px, black edge) to the X eyes
+Sizes are set so they still read at 320 px wide (the YouTube home feed).
+SPOILERS: check every new game. In this game the wolves were Fable (Claude, seat 2) and Astra (GPT, seat 5). An
+early "TRUST CLAUDE?" above Fable was removed for that reason; the CLAUDE FABLE / GPT ASTRA name labels are the
+owner's own choice (they name the two best-known models; they also happen to be the two wolves).
+WHO'S THE WOLF? gets the same names, WHO KILLED HIM? and arrow, with TRUST NO ONE (left, 42 px, +8) and CAN AI LIE?
+(right, 42 px, -8) at y 262, under its wider title.
+2 ARE LYING gets the same, with WHICH TWO? on the left (WHO'S LYING? would repeat its title) and the names at
+y 266, 38 px, just above the two pairs of wolf eyes.
+Change wording or position in LAYOUTS / NAMES / KILL / ARROW in add_questions.py and rerun step 3 (no re-render).
+
+The logos (rasterize_logos.py + prep_logos.py)
+----------------------------------------------
+Downloaded from Wikimedia Commons (logos/SOURCES.txt), not redrawn. Blender's SVG import can't do Gemini's blurred
+colour gradient, so all four are drawn by headless Edge at 1024 px on a transparent background, then:
+OpenAI's black mark is recoloured white (it sits on a dark cloak); for Grok only the white mark is kept (the icon's
+black rounded square is dropped); Claude (orange) and Gemini (colour gradient) stay as they are. Each is cropped
+to its shape and centred on a square canvas.
+
+History
+-------
+2026-10-19  v1: four versions, logos built from shapes in the script.
+2026-10-19  v2 (owner): real downloaded logos; the title rendered in its own sharp pass with an ink outline;
+            the questions version added and picked as the main thumbnail.
+2026-10-19  v3 (independent review 7.5/10): the spoiler question replaced, questions bigger and fewer, an arrow to
+            the body, the body and its blood pool brought into frame, letter spacing on the title, edge logos centred.
+2026-10-19  v4 (review 8.5/10): the dead body tipped toward the camera with big X eyes and red claw tears, a smooth
+            curved arrow, IS IT GROK? bigger.
+2026-10-19  v4 passed the independent review at 9.0/10.
+2026-10-19  v5 (owner): CLAUDE FABLE and GPT ASTRA above their figures in place of IS IT GROK?; review polish: the
+            X eyes set apart, the arrow thicker.
+2026-10-19  v6 (owner): outputs moved into thumbnail/Game 1/ (bases/ for the plain renders); WHO'S THE WOLF? gets the
+            small texts too.
+2026-10-19  v7 (owner): 2 ARE LYING gets the small texts too.
+
+2026-10-20  A/B set (owner): FullGameFolder/Game 1/Thumbnail/AB test/ = A 5_questions, B 2_whos_the_wolf, C 3_two_are_lying
+            (same scene and texts, only the big hook differs: a clean test of the hook). For YouTube Test & Compare.
+
+SHORT 1 THUMBNAIL (vertical 1080x1920, 2026-10-20)
+--------------------------------------------------
+The main thumbnail (WEREWOLF + the small white texts) re-made for the Short, as a NEW scene; nothing above changed.
+    blender --background --factory-startup --python thumbnail/make_short_thumbnail.py   -> Game 1/bases/short_1_base.png
+    python thumbnail/add_short_questions.py                                            -> Game 1/short_1.png
+make_short_thumbnail.py borrows make_thumbnails.py's parts (grid floor, fog, figures, real logos, the dead body, the
+sharp title pass) without editing it. Six in a row would be tiny on a phone card, so the cast stands in two rows like
+a team photo: back row on a 1.85 m black riser with a red glowing edge (Fable, Gemini, Astra), front row on the floor
+(Sol, Grok, Opus). Camera (0, -10.5, 3.6) -> (0, 2, 3.35), 38 mm, vertical sensor 36 mm. Title WEREWOLF size 2.0 at
+z 7.75. The body tipped 28 deg toward the camera, in front.
+Texts (add_short_questions.py, add_questions.py's label/arrow): WHO'S LYING? (290, 515) 70 px +8 · CAN AI LIE?
+(800, 535) 70 px -8 · CLAUDE FABLE (280, 670) 58 px +5 · GPT ASTRA (800, 670) 58 px -5 · WHO KILLED HIM? (640, 1830)
+66 px +3 with a curved arrow up to the X eyes. Copied to FullGameFolder/Game 1/Shorts/.
+
+SHORT 3 THUMBNAIL (vertical 1080x1920, 2026-10-21)
+--------------------------------------------------
+The full video's A/B test (day 3: the clean WEREWOLF thumbnail 48.3% of watch time, ahead of the ones with small
+texts) favoured a clean design, so Short 3's is the clean vertical base (Game 1/bases/short_1_base.png, no new
+render) with ONE line, the Short's premise: "6 AIs. 2 SECRET WOLVES." (540, 575), 84 px, -3 deg.
+    python thumbnail/add_short_questions.py   -> Game 1/short_1.png (unchanged) and Game 1/short_3.png
+Copied to FullGameFolder/Game 1/Shorts/.
+
+GAME 2 THUMBNAILS (game 06ce0859, 2026-10-23, the owner's three: an A/B/C set)
+--------------------------------------------------------------------------------
+A new script borrows make_thumbnails.py's parts without changing it (as the Short did):
+    blender --background --factory-startup --python thumbnail/make_thumbnails_g2.py [-- B_vs_base C_two_are_lying]
+    python thumbnail/add_bubbles_g2.py          (A's names and B's names + bubbles, both on bases/B_vs_base.png)
+-> thumbnail/Game 2/ (+ bases/), copied to FullGameFolder/Game 2/Thumbnail/.
+Same world as Game 1 (black floor, glowing red grid, red fog, warm key, red rims, camera, the sharp title pass).
+A  Fable VS Sol (owner, five rounds: face to face; the others watching in a circle; further back and together;
+   "too close together, not cinematic"; "logos misplaced"). Final:
+   - Fable (seat 4, pink, Claude) at (-2.35, -0.1) and Sol (seat 2, light blue, OpenAI) at (2.35, -0.1), scale 2.15:
+     bodies turned 45 deg toward each other (yaw = pi +- 45 deg), heads turned 32 deg more (the T<seat>_Head pivot), so
+     they look each other in the eye while each logo sits on the chest as in Game 1 (side-on, a logo had no surface:
+     on the flank or the sleeve it floated or hid).
+   - The other five on an arc round the duel: Gemini (-5, 2.4) and Opus (5, 2.4) wrap round at the frame's edges,
+     Grok (-1.9, 5.6), Astra (0, 6.4), DeepSeek (1.9, 5.6) behind, between the two; scale 1.5; each turned toward
+     the duel.
+   - Camera raised to (0, -8.6, 3.5), looking at (0, 2.6, 2.05): from a little above, the arc reads as a circle.
+   - A warm spotlight (2200 W, 28 deg) from above on the ground between the two. "VS" (size 2.8) at z 4.5.
+   - No other text: names above the heads were tried and dropped (owner: "they already have logos").
+B  the same picture + "I'M THE HUNTER" in a white comic bubble over each (add_bubbles_g2.py; bubbles at (262, 74)
+   and (1018, 74), tails to the hood tops; Impact 58 px black,
+   7 px black outline, tail to the head, soft shadow; drawn at 3x and scaled down). In the game both claimed the
+   Hunter and only Fable was telling the truth: so both figures are PLAIN (no Hunter hat or crossbow, no Sheriff star),
+   a tell would give the answer away.
+C  Game 1's 2 ARE LYING picture with Game 2's seven (scale 1.35, x -3.9..3.9 in 1.3 steps, seats/colours/logos as in
+   the video), the dead body (seat colour 8) and its pool; only the headline, no small labels (owner). The two pairs of
+   wolf eyes are NOT Game 1's positions: those put a pair right above Astra, a real wolf this game. They sit in the
+   only on-screen gaps with no wolf beside them (Grok | Fable, DeepSeek | Opus: world x -0.88 and 4.26 at y 3.6;
+   mind the perspective: further back, the same x lands nearer the middle on screen). lying_eyes_g2().
+DeepSeek's logo (new, 2026-10-23, owner's OK): logos/deepseek.svg from Wikimedia Commons (DeepSeek-icon.svg, MIT,
+3.6 KB), the blue whale kept as it is; rasterize_logos.py + prep_logos.py now include it (run from PowerShell).
+SPOILERS (checked): A and B show the game's central duel without saying who lies; C names no one.
+
+GAME 2 SHORT 1 THUMBNAIL (vertical 1080x1920, 2026-10-24)
+---------------------------------------------------------
+Game 1's clean Short design (SHORT 1 / SHORT 3 above) with Game 2's seven, as NEW scripts (nothing above changed):
+    blender --background --factory-startup --python thumbnail/make_short_thumbnail_g2.py   -> Game 2/bases/short_1_base.png
+    python thumbnail/add_short_text_g2.py                                                -> Game 2/short_1.png
+- Team photo in two rows. On the 1.85 m riser (now 7.2 m wide), four: Gemini (-2.55), Fable (-0.85), Sol (0.85),
+  Opus (2.55). In front, on the floor in the back row's gaps, three: Grok (-1.7), Astra (0), DeepSeek (1.7).
+  Scale 1.5, each with its lab logo on the chest. The body (seat colour 8, nobody's) lies across the front.
+- Camera (0, -10.5, 3.6) -> (0, 2, 3.35), 35 mm (Game 1: 38 mm; wider so four fit abreast), vertical sensor 36 mm.
+  WEREWOLF size 2.0 at z 7.75.
+- One line, the Short's premise, in the band under the title: "7 AIs. 2 ARE LYING." (540, 600), 88 px, -3 deg
+  (add_questions.label). The clean design is used because it won Game 1's A/B test.
+- Spoiler rule: nothing marks a wolf (no eyes, no arrows, no names).
+Copied to FullGameFolder/Game 2/Shorts/Short 1 - thumbnail (vertical).png.
+
+GAME 2 SHORT 3 THUMBNAIL (vertical 1080x1920, 2026-10-26)
+---------------------------------------------------------
+Owner: only Astra's character and logo, covering most of the screen, in the same red theme. A NEW script:
+    blender --background --factory-startup --python thumbnail/make_short3_thumbnail_g2.py   -> Game 2/short_3.png
+- One figure: GPT-6 Astra (seat 5, white collar), scale 1.5, facing the camera, the OpenAI logo on the chest
+  (g2.contestant). The same world: black floor with the glowing red grid, red fog, a warm key (1.6, -6, 5.5) and two
+  red rim spots behind (x +-3.5).
+- The villain shot (owner's second round): the camera low and close, below the face, looking up through a wide lens:
+  (0, -1.85, 0.68) -> (0, 0, 1.72), 18 mm, vertical sensor 36 mm. The cloak flares toward the viewer, a slight
+  warped, looming perspective. The head pivot (T5_Head) is bowed -32 deg about X (negative bows forward), so Astra
+  stares down at the viewer.
+  Tried and dropped:
+  - the first round's straight-on 40 mm shot (0, -3.95, 1.9);
+  - the camera at the feet (z 0.3-0.5): the big collar hid the face and the head came out tiny;
+  - +26 deg on the head: that tilts it back, not forward.
+- No text (owner).
+- Spoiler rule: the plain figure, no wolf ears or red eyes. The Short reveals Astra in its first second; the
+  thumbnail does not.
+Copied to FullGameFolder/Game 2/Shorts/Short 3 - thumbnail (vertical).png.
+
+GAME 3 THUMBNAIL 1 - THE STANDOFF (game c0416225, 2026-10-28)
+-------------------------------------------------------------
+Owner's idea: the screen split in two, China on the left in red, the USA on the right in blue, each side's flag
+barely visible, the Chinese models on the left and the American ones on the right, a big VS in the middle as the
+divider ("it is like a challenge and gamers love that", not the campfire), WEREWOLF across the top, a bit thinner.
+A NEW script (nothing above changed):
+    python thumbnail/make_flags.py                                                       -> thumbnail/flags/
+    blender --background --factory-startup --python thumbnail/make_thumbnails_g3.py      -> Game 3/1_standoff.png
+- Logos: Qwen (Qwen_logo.svg, CC0, 1.6 KB) and Meta (Meta_Platforms_Inc._logo_(cropped).svg, PD, 2.4 KB) downloaded
+  from Wikimedia Commons with the owner's OK (logos/SOURCES.txt), added to rasterize_logos.py / prep_logos.py.
+- Flags: drawn by make_flags.py to the official construction sheets (China: the 30x20 grid star positions; USA: the
+  1:1.9 hoist/fly, 13 stripes, 50 stars in 9 rows), not look-alikes. In the scene each hangs far back (y 13) in its
+  side's fog, a little wavy, emission 0.09, edges faded out in the material (smoothstep over the outer 20-24%).
+- Floor and grid run to the horizon (owner: Games 1-2's 80 m floor and grid left a black band under the sky and
+  unfinished squares at the sides): the floor ends where the grid ends (a further 100 m of bare floor showed as a
+  black line at the horizon), the lines running back out to x +-108 and back to y 190, the
+  cross lines out to y 190; the middle line is a red and a blue one side by side, the seam.
+- World: Games 1-2's black floor and grid, but split at x = 0: red grid, red fog, red rim on the left; blue grid
+  (0.1, 0.3, 1.0), blue fog (0.08, 0.2, 0.75), blue rim on the right. The intro's TEAM CHINA red / TEAM USA blue.
+- Team China (wolf form, as in the intro: ears, red eyes at their normal size): DeepSeek in front (-2.0, -0.6),
+  Qwen behind at (-4.05, 0.6) so its logo clears DeepSeek (owner: DeepSeek in front); scale 2.0, turned toward the
+  middle. Team USA: only GPT, Claude, Gemini (owner) at x 1.9 / 3.2 / 4.5, scale 1.7, turned toward the middle.
+  Five in a line running back was tried: each hid the next one's logo.
+- Camera (0, -8.6, 3.2) -> (0, 2.6, 2.4), 28 mm. Colours from model_colors.json (colors.use_game).
+- Titles: WEREWOLF in Arial Narrow Bold (thinner than Impact), size 2.6 at z 5.35 (raised from 5.0, owner: clear of the ears), red with a red halo; VS size 2.2 at
+  (0, 1.0, 2.3), warm white with a warm halo. Each gets its own sharp pass (sharp_pass: mt.title_pass per group).
+- Spoilers: none; the video's premise is that the two Chinese AIs are the wolves.
+Copied to FullGameFolder/Game 3/Thumbnail/1 - Standoff.png.
+
+GAME 3 THUMBNAIL 3 - LIAR (2026-10-28)
+-------------------------------------
+Owner: the drama creators' style ("literally like the photo": one face on the left of a black frame, one huge word
+on the right with a red underline), with DeepSeek and LIAR. Its lies in the game: "I'm just a Villager", then
+"I am the Hunter". No spoiler: the intro reveals the two Chinese AIs as the wolves.
+    blender --background --factory-startup --python thumbnail/make_thumbnails_g3.py -- 3_liar_base
+    python thumbnail/add_liar_g3.py                                   -> Game 3/3_liar.png
+- Scene (build_liar): DeepSeek alone in wolf form (ears, red eyes), scale 1.5, turned a little toward the word,
+  its logo raised to the upper chest (local z 1.0) so it stays in a head-and-shoulders frame. Camera
+  (0.86, -5.2, 2.2) -> (0.86, 0, 2.25), 50 mm. World near black (0.004). A warm area key from the front left
+  (700 W) and two red rim spots from behind (1400 / 2200 W).
+- The face: angry brows only (owner: "adding brows to look angry ... no need for full face"). The video's face
+  is a dark hollow with glowing dot eyes, so ink lines would not show: the brows are glowing strokes in the eyes'
+  own colour (red for a wolf), NURBS curves (radius 0.011) laid just in front of the face's surface and parented
+  to the head pivot (face_lines, EXPRESSIONS["angry"]). A smug brow + grin and a wary frown with a mouth were tried
+  and dropped.
+- The red mist (owner's example: a bank of red smoke, ragged top, dark above, "just a bit less"): painted in 2D in
+  add_liar_g3.py, behind the figure only. Blender also renders the frame with a transparent background
+  (bases/3_liar_base_alpha.png, variant(..., alpha_pass=True)) and the mist goes where that alpha is empty.
+  The mist: smoky red (170, 38, 44) at most 0.78 cover; the bank's top at 40% of the height, rising and dipping
+  along x (one row of noise, +-14%), its edge pushed up and down by mid-sized puffs (noise from 5 cells up) so it
+  billows; soft over 22% of the height, gone at the very bottom; lighter puffs and darker gaps inside; blurred 5 px.
+  A 3D fog was tried first: it lay as a horizontal band and its light showed as a bright spot (owner: "not
+  horizontal lines").
+- The word: LIAR in Arial Narrow Bold (the WEREWOLF title's font), white, as big as fits x 600-1250 (336 px),
+  baseline 470; a red (225, 22, 30) brush-stroke underline under it, thick in the middle, tapering, rough-edged,
+  rising slightly to the right; a soft dark drop shadow under both.
+- Dropped on the way (owner): a wolf-shadow standoff (a floor shadow can't show in that layout), a standoff with
+  faces ("no need to rework the first one"), a DeepSeek close-up and a two-wolf close-up with speech bubbles.
+Copied to FullGameFolder/Game 3/Thumbnail/3 - LIAR.png. The set: 1 - Standoff, 3 - LIAR.
+
+GAME 3 THUMBNAIL 4 - STANDOFF WITH FACES (2026-10-28)
+----------------------------------------------------
+Owner: a version of 1 - Standoff to put in its place in the A/B test (1 stays in the folder): no WEREWOLF title,
+the same angry brows as LIAR on the two wolves, smug expressions on the Americans.
+    blender --background --factory-startup --python thumbnail/make_thumbnails_g3.py -- 4_standoff_faces
+- build(faces=True): the same scene as 1_standoff; DeepSeek and Qwen get EXPRESSIONS["angry"] (red strokes, like
+  their eyes), GPT, Claude and Gemini EXPRESSIONS["smug"] (white strokes: one brow raised in an arch, the other low
+  and level, a lopsided grin). Only VS is drawn (its sharp pass); without the title the flags show a little more.
+- Bigger (owner: "without WEREWOLF you can increase the size of figures and flags"): the FACES framing. Lens 33 mm
+  (from 28) and the look-at lowered to (0, 2.6, 1.6), into the room the title left; Team China's x pulled in by
+  0.9; Team USA at x 1.75 / 3.0 / 4.25, turned toward (-0.3, -9) rather than the middle (closer and turned, each
+  chest hid behind its neighbour); the flags 14 m and 16 m wide, centred at z 3.3 (higher, the zoom cut them off),
+  the flags' glow evened out (owner: the US flag, white stripes and stars, was the brightest, most detailed part
+  and pulled the eye from the faces; China's dark red one hardly showed): China 0.11, USA 0.042, so the spread of
+  brightness in a patch of sky beside each is the same (13.2 / 13.1; it was 13.0 / 16.1). 1_standoff is unchanged
+  (checked: the same pixels).
+Copied to FullGameFolder/Game 3/Thumbnail/4 - Standoff, faces.png.

@@ -1,0 +1,1 @@
+- Protector — Village team. Every night, protects one living player from the werewolves' attack (kill or infection), the Big Bad Wolf and the White Werewolf. Cannot protect the same player two nights in a row{{protector_self}}. Protection does not stop poison, the Hunter, heartbreak, the Knight's curse or execution.

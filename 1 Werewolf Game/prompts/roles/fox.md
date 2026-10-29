@@ -1,0 +1,1 @@
+- Fox — Village team. Every night, sniffs one living player other than itself: learns whether there is a werewolf (wolf nature) among that player and their two living neighbours. If there is none, the Fox loses its power for good.

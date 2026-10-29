@@ -1,0 +1,1 @@
+- Piper — its own team. Every night charms up to two living, uncharmed players. Charmed players learn who is charmed but keep their team. The Piper wins alone when every other living player is charmed. An infected Piper, or one who becomes a cross-team Lover, loses this power.

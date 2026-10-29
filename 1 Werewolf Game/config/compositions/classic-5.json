@@ -1,0 +1,19 @@
+{
+  "id": "classic-5",
+  "label": "Classic 5",
+  "category": "classic",
+  "seats": 5,
+  "cards": [
+    "werewolf",
+    "seer",
+    "villager",
+    "villager",
+    "villager"
+  ],
+  "description": "The smallest table: one wolf, one Seer and three villagers. Fast, and a clean test of who reads the table best.",
+  "tags": [
+    "beginner",
+    "quick"
+  ],
+  "notes": "Probably village-favoured; calibration candidate."
+}

@@ -1,0 +1,1 @@
+The debrief continues: you have now read everyone's comments. Write one short reply (at most {{words}} words) in "speech" — agree, push back, or add the thing nobody mentioned. An empty string passes. Set "lean" and "claim" to null.

@@ -1,0 +1,20 @@
+{
+  "id": "classic-8",
+  "label": "Classic 8",
+  "category": "classic",
+  "seats": 8,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "seer",
+    "witch",
+    "hunter",
+    "protector",
+    "cupid",
+    "villager"
+  ],
+  "description": "Adds a Protector and Cupid: two Lovers who live and die together, sometimes across teams.",
+  "tags": [
+    "lovers"
+  ]
+}

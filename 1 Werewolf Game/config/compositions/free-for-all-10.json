@@ -1,0 +1,24 @@
+{
+  "id": "free-for-all-10",
+  "label": "Free-for-All",
+  "category": "recommended",
+  "seats": 10,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "white_werewolf",
+    "piper",
+    "seer",
+    "witch",
+    "hunter",
+    "protector",
+    "elder",
+    "knight"
+  ],
+  "description": "Four sides: the village, the pack, the White Werewolf hidden inside it, and the Piper. The pack wins only if its traitor falls first; alliances form and break every day.",
+  "tags": [
+    "solo",
+    "chaos"
+  ],
+  "notes": "Plain wolves win rarely in random-bot play: calibration candidate."
+}

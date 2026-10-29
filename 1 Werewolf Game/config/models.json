@@ -1,0 +1,1600 @@
+{
+  "profiles": [
+    {
+      "alias": "deepseek-flash",
+      "openrouterId": "deepseek/deepseek-v4.1-flash",
+      "label": "DeepSeek V4.1 Flash",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-21: $0.15 in / $0.60 out per 1M tokens, 1M context. Reasoning is MANDATORY (2026-10-22): the model thinks on every call by default; with no thinking budget sent, its thinking used the whole 1400-token output on long Day 2 prompts and the answer came back empty or cut off (qwen-flash 41, deepseek-flash 23, glm-flash 17, mimo-flash 7 such calls in stored games). A 2000-token thinking budget (max_tokens 3400) fixed it in live tests."
+    },
+    {
+      "alias": "gpt-luna",
+      "openrouterId": "openai/gpt-5.6-luna",
+      "label": "OpenAI GPT-5.6 Luna",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "$0.20 / $1.20. Temperature not supported by this model (left null)."
+    },
+    {
+      "alias": "gemini-flash",
+      "openrouterId": "google/gemini-3.8-flash",
+      "label": "Google Gemini 3.8 Flash",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 1500,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-22: $1.35 in / $6.75 out per 1M tokens. Reasoning is MANDATORY on this endpoint (a request that disables it returns HTTP 400), and reasoning tokens are billed as output, so the budget and the cost reservation must include them."
+    },
+    {
+      "alias": "qwen-flash",
+      "openrouterId": "qwen/qwen3.8-flash",
+      "label": "Qwen 3.8 Flash",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "$0.15 / $0.47. Reasoning is MANDATORY (2026-10-22): the model thinks on every call by default; with no thinking budget sent, its thinking used the whole 1400-token output on long Day 2 prompts and the answer came back empty or cut off (qwen-flash 41, deepseek-flash 23, glm-flash 17, mimo-flash 7 such calls in stored games). A 2000-token thinking budget (max_tokens 3400) fixed it in live tests."
+    },
+    {
+      "alias": "glm-flash",
+      "openrouterId": "z-ai/glm-5.3-flash",
+      "label": "Z.ai GLM 5.3 Flash",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "$0.075 / $0.25. Reasoning is MANDATORY (2026-10-22): the model thinks on every call by default; with no thinking budget sent, its thinking used the whole 1400-token output on long Day 2 prompts and the answer came back empty or cut off (qwen-flash 41, deepseek-flash 23, glm-flash 17, mimo-flash 7 such calls in stored games). A 2000-token thinking budget (max_tokens 3400) fixed it in live tests."
+    },
+    {
+      "alias": "mimo-flash",
+      "openrouterId": "xiaomi/mimo-v2.6-flash",
+      "label": "Xiaomi MiMo V2.6 Flash",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "$0.14 / $0.28. Released 2026-09-21 — very new, verify behaviour. Reasoning is MANDATORY (2026-10-22): the model thinks on every call by default; with no thinking budget sent, its thinking used the whole 1400-token output on long Day 2 prompts and the answer came back empty or cut off (qwen-flash 41, deepseek-flash 23, glm-flash 17, mimo-flash 7 such calls in stored games). A 2000-token thinking budget (max_tokens 3400) fixed it in live tests."
+    },
+    {
+      "alias": "minimax-m3",
+      "openrouterId": "minimax/minimax-m3",
+      "label": "MiniMax M3",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "$0.30 / $1.20."
+    },
+    {
+      "alias": "mistral-small",
+      "openrouterId": "mistralai/mistral-small-2603",
+      "label": "Mistral Small (2603)",
+      "enabled": false,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Disabled 2026-09-22: every ping returned HTTP 429 from the provider. Re-enable and re-run `ww models check --ping` if that clears."
+    },
+    {
+      "alias": "llama-maverick",
+      "openrouterId": "meta-llama/llama-4-maverick",
+      "label": "Meta Llama 4 Maverick",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 0,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "$0.20 / $0.80. No reasoning support."
+    },
+    {
+      "alias": "claude-haiku",
+      "openrouterId": "anthropic/claude-haiku-4.5",
+      "label": "Anthropic Claude Haiku 4.5",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "anthropic",
+      "notes": "$1 / $5 — most expensive profile here; kept for lab diversity."
+    },
+    {
+      "alias": "gpt6-luna",
+      "openrouterId": "openai/gpt-6-luna",
+      "label": "OpenAI GPT-6 Luna",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.1 in / $0.5 out per 1M tokens, 1,050,000 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. Temperature not supported (left null)."
+    },
+    {
+      "alias": "gpt6-sol",
+      "openrouterId": "openai/gpt-6-sol",
+      "label": "OpenAI GPT-6 Sol",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $2 in / $10 out per 1M tokens, 1,050,000 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. Temperature not supported (left null)."
+    },
+    {
+      "alias": "gpt6-astra",
+      "openrouterId": "openai/gpt-6-astra",
+      "label": "OpenAI GPT-6 Astra",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $10 in / $50 out per 1M tokens, 1,050,000 context (flagship). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. Temperature not supported (left null)."
+    },
+    {
+      "alias": "gpt55",
+      "openrouterId": "openai/gpt-5.5",
+      "label": "OpenAI GPT-5.5",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $5 in / $30 out per 1M tokens, 1,050,000 context (premium). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. Temperature not supported (left null)."
+    },
+    {
+      "alias": "gpt54-mini",
+      "openrouterId": "openai/gpt-5.4-mini",
+      "label": "OpenAI GPT-5.4 Mini",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.75 in / $4.5 out per 1M tokens, 400,000 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. Temperature not supported (left null)."
+    },
+    {
+      "alias": "claude-sonnet-5",
+      "openrouterId": "anthropic/claude-sonnet-5",
+      "label": "Anthropic Claude Sonnet 5",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "anthropic",
+      "notes": "Catalogue 2026-09-24: $2 in / $10 out per 1M tokens, 1,000,000 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. Temperature not supported (left null)."
+    },
+    {
+      "alias": "claude-opus-5-5",
+      "openrouterId": "anthropic/claude-opus-5.5",
+      "label": "Anthropic Claude Opus 5.5",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "json_object",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "anthropic",
+      "notes": "Catalogue 2026-09-24: $4 in / $20 out per 1M tokens, 1,000,000 context (premium). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. 2026-10-21: structuredOutput json_object, because Anthropic now refuses our strict json_schema requests for this model (content_filter: 'reverse engineering or duplicating model outputs'); plain JSON mode works and every answer is still validated against the schema."
+    },
+    {
+      "alias": "claude-fable-5-1",
+      "openrouterId": "anthropic/claude-fable-5.1",
+      "label": "Anthropic Claude Fable 5.1",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "json_object",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "anthropic",
+      "notes": "Catalogue 2026-09-24: $10 in / $50 out per 1M tokens, 1,000,000 context (flagship). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. Temperature not supported (left null). 2026-10-21: structuredOutput json_object, because Anthropic now refuses our strict json_schema requests for this model (content_filter: 'reverse engineering or duplicating model outputs'); plain JSON mode works and every answer is still validated against the schema."
+    },
+    {
+      "alias": "gemini-pro",
+      "openrouterId": "google/gemini-3.1-pro-preview",
+      "label": "Google Gemini 3.1 Pro",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 1500,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $2 in / $12 out per 1M tokens, 1,048,576 context (premium). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. Reasoning is assumed MANDATORY (Gemini Pro-class models reason on every call)."
+    },
+    {
+      "alias": "gemini-flash-lite",
+      "openrouterId": "google/gemini-3.5-flash-lite",
+      "label": "Google Gemini 3.5 Flash Lite",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.3 in / $2.5 out per 1M tokens, 1,048,576 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "gemma-4-31b",
+      "openrouterId": "google/gemma-4-31b-it",
+      "label": "Google Gemma 4 31B",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.09 in / $0.34 out per 1M tokens, 262,144 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "grok-4-7",
+      "openrouterId": "x-ai/grok-4.7",
+      "label": "xAI Grok 4.7",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $1.6 in / $4.8 out per 1M tokens, 500,000 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "grok-4-20",
+      "openrouterId": "x-ai/grok-4.20",
+      "label": "xAI Grok 4.20",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $1.25 in / $2.5 out per 1M tokens, 2,000,000 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "deepseek-pro",
+      "openrouterId": "deepseek/deepseek-v4-pro",
+      "label": "DeepSeek V4 Pro",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.900798 in / $1.8016 out per 1M tokens, 1,048,576 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "deepseek-v4-flash",
+      "openrouterId": "deepseek/deepseek-v4-flash",
+      "label": "DeepSeek V4 Flash (0423)",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.08092 in / $0.16184 out per 1M tokens, 1,048,576 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "qwen-max",
+      "openrouterId": "qwen/qwen3.8-max-0902",
+      "label": "Qwen 3.8 Max",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $2 in / $6 out per 1M tokens, 1,000,000 context (premium). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "qwen-plus",
+      "openrouterId": "qwen/qwen3.7-plus",
+      "label": "Qwen 3.7 Plus",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.32 in / $1.28 out per 1M tokens, 1,000,000 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. 2026-10-26: reasoning made MANDATORY with a 2000-token thinking budget (max_tokens 3400), the same fix as its flash siblings (qwen-flash / mimo-flash, 2026-10-22): an open-weight model that thinks by default otherwise uses the whole 1400-token output and the answer comes back empty."
+    },
+    {
+      "alias": "kimi-k3",
+      "openrouterId": "moonshotai/kimi-k3",
+      "label": "Moonshot Kimi K3",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $3 in / $15 out per 1M tokens, 1,048,576 context (premium). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "kimi-k2-6",
+      "openrouterId": "moonshotai/kimi-k2.6",
+      "label": "Moonshot Kimi K2.6",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.95 in / $4 out per 1M tokens, 262,144 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. 2026-10-26: reasoning made MANDATORY with a 2000-token thinking budget (max_tokens 3400), the same fix as its flash siblings (qwen-flash / mimo-flash, 2026-10-22): an open-weight model that thinks by default otherwise uses the whole 1400-token output and the answer comes back empty."
+    },
+    {
+      "alias": "glm-5-3",
+      "openrouterId": "z-ai/glm-5.3",
+      "label": "Z.ai GLM 5.3",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $1.4 in / $4.4 out per 1M tokens, 1,310,720 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "mimo-pro",
+      "openrouterId": "xiaomi/mimo-v2.6-pro",
+      "label": "Xiaomi MiMo V2.6 Pro",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.435 in / $0.87 out per 1M tokens, 1,048,576 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game. 2026-10-26: reasoning made MANDATORY with a 2000-token thinking budget (max_tokens 3400), the same fix as its flash siblings (qwen-flash / mimo-flash, 2026-10-22): an open-weight model that thinks by default otherwise uses the whole 1400-token output and the answer comes back empty."
+    },
+    {
+      "alias": "mistral-medium",
+      "openrouterId": "mistralai/mistral-medium-3-5",
+      "label": "Mistral Medium 3.5",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $1.5 in / $7.5 out per 1M tokens, 262,144 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "nemotron-ultra",
+      "openrouterId": "nvidia/nemotron-3-ultra-550b-a55b",
+      "label": "NVIDIA Nemotron 3 Ultra",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.6 in / $2.4 out per 1M tokens, 262,144 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "command-a-plus",
+      "openrouterId": "cohere/command-a-plus",
+      "label": "Cohere Command A+",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.3 in / $1.5 out per 1M tokens, 192,000 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "hunyuan-3",
+      "openrouterId": "tencent/hy3",
+      "label": "Tencent Hunyuan 3",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.0825 in / $0.33 out per 1M tokens, 262,144 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "step-flash",
+      "openrouterId": "stepfun/step-3.7-flash",
+      "label": "StepFun Step 3.7 Flash",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.2 in / $1.15 out per 1M tokens, 262,144 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "mercury",
+      "openrouterId": "inception/mercury-2.5",
+      "label": "Inception Mercury 2.5",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.04 in / $0.15 out per 1M tokens, 260,000 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "llama-scout",
+      "openrouterId": "meta-llama/llama-4-scout",
+      "label": "Meta Llama 4 Scout",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 0,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.1 in / $0.3 out per 1M tokens, 1,310,720 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "llama-70b",
+      "openrouterId": "meta-llama/llama-3.3-70b-instruct",
+      "label": "Meta Llama 3.3 70B",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 0,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $0.1 in / $0.32 out per 1M tokens, 131,072 context (budget). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "hermes-405b",
+      "openrouterId": "nousresearch/hermes-4-405b",
+      "label": "Nous Hermes 4 405B",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-09-24: $1 in / $3 out per 1M tokens, 131,072 context (mid-range). Added 2026-09-24, not yet played: run `ww models check --ping` before a real game."
+    },
+    {
+      "alias": "deepseek-flash-1017",
+      "openrouterId": "deepseek/deepseek-v4.1-flash-1017",
+      "label": "DeepSeek V4.1 Flash (1017)",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $0.15 in / $0.60 out per 1M tokens, 1,048,576 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. The October 17 snapshot of DeepSeek V4.1 Flash (the newest DeepSeek)."
+    },
+    {
+      "alias": "deepseek-pro-0813",
+      "openrouterId": "deepseek/deepseek-v4-pro-0813",
+      "label": "DeepSeek V4 Pro (0813)",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $0.66 in / $1.98 out per 1M tokens, 1,048,576 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. The GA release of DeepSeek V4 Pro (newer than deepseek-pro)."
+    },
+    {
+      "alias": "kimi-k3-1-pro",
+      "openrouterId": "moonshotai/kimi-k3.1-pro",
+      "label": "Moonshot Kimi K3.1 Pro",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $2 in / $10 out per 1M tokens, 1,048,576 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. Moonshot's new flagship (successor to Kimi K3). No temperature parameter."
+    },
+    {
+      "alias": "qwen-max-prime",
+      "openrouterId": "qwen/qwen3.8-max-prime",
+      "label": "Qwen 3.8 Max Prime",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $4 in / $12 out per 1M tokens, 1,000,000 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. Alibaba's top Qwen tier."
+    },
+    {
+      "alias": "glm-5-3-prime",
+      "openrouterId": "z-ai/glm-5.3-prime",
+      "label": "Z.ai GLM 5.3 Prime",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $2.80 in / $8.80 out per 1M tokens, 1,000,000 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. Z.ai's top GLM tier. JSON mode only (no strict schema): `auto` resolves to json_object; every answer is still validated."
+    },
+    {
+      "alias": "minimax-m3-1-flash",
+      "openrouterId": "minimax/minimax-m3.1-flash",
+      "label": "MiniMax M3.1 Flash",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $0.15 in / $0.60 out per 1M tokens, 1,048,576 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call."
+    },
+    {
+      "alias": "step-5",
+      "openrouterId": "stepfun/step-5-preview",
+      "label": "StepFun Step 5 Preview",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $1 in / $2.70 out per 1M tokens, 1,048,576 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. StepFun's new flagship (600B MoE)."
+    },
+    {
+      "alias": "hunyuan-4",
+      "openrouterId": "tencent/hy4-preview",
+      "label": "Tencent Hunyuan 4 Preview",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $0.75 in / $2.25 out per 1M tokens, 1,048,576 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. Tencent's new flagship (770B MoE), successor to hunyuan-3."
+    },
+    {
+      "alias": "seed-2-1-turbo",
+      "openrouterId": "bytedance-seed/seed-2-1-turbo",
+      "label": "ByteDance Seed 2.1 Turbo",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $0.50 in / $2.50 out per 1M tokens, 262,144 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. The first ByteDance model on the list."
+    },
+    {
+      "alias": "ling-3-1-flash",
+      "openrouterId": "inclusionai/ling-3.1-flash",
+      "label": "inclusionAI Ling 3.1 Flash",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $0.075 in / $0.225 out per 1M tokens, 262,144 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. Ant Group's open model (inclusionAI)."
+    },
+    {
+      "alias": "gpt-6-1-sol",
+      "openrouterId": "openai/gpt-6.1-sol",
+      "label": "OpenAI GPT-6.1 Sol",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $2 in / $10 out per 1M tokens, 1,050,000 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Successor to GPT-6 Sol."
+    },
+    {
+      "alias": "gpt-6-1-terra",
+      "openrouterId": "openai/gpt-6.1-terra",
+      "label": "OpenAI GPT-6.1 Terra",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $1 in / $5 out per 1M tokens, 1,050,000 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. A new OpenAI tier between Luna and Sol (released 2026-10-26)."
+    },
+    {
+      "alias": "claude-sonnet-5-5",
+      "openrouterId": "anthropic/claude-sonnet-5.5",
+      "label": "Anthropic Claude Sonnet 5.5",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "json_object",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "anthropic",
+      "notes": "Catalogue 2026-10-26: $2 in / $10 out per 1M tokens, 1,000,000 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. structuredOutput json_object from the start: Anthropic's filter refuses our strict json_schema requests for Opus 5.5 and Fable 5.1 (2026-10-21); the inner-voice wording switch applies automatically."
+    },
+    {
+      "alias": "claude-haiku-5-5",
+      "openrouterId": "anthropic/claude-haiku-5.5",
+      "label": "Anthropic Claude Haiku 5.5",
+      "enabled": true,
+      "params": {
+        "temperature": null,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "json_object",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 60000,
+      "maxConcurrency": 4,
+      "cacheControl": "anthropic",
+      "notes": "Catalogue 2026-10-26: $0.10 in / $0.50 out per 1M tokens, 1,000,000 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. structuredOutput json_object from the start, as for the other Claude models."
+    },
+    {
+      "alias": "gemini-4-argon",
+      "openrouterId": "google/gemini-4-argon",
+      "label": "Google Gemini 4 Argon",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 1500,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $2 in / $10 out per 1M tokens, 1,048,576 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is assumed MANDATORY (Gemini Pro-class models reason on every call). Gemini's vote enums are sent as text automatically (textEnumSchema for google/ ids)."
+    },
+    {
+      "alias": "muse-wonder",
+      "openrouterId": "meta/muse-wonder",
+      "label": "Meta Muse Wonder",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "max_tokens",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": true
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $4 in / $20 out per 1M tokens, 1,048,576 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game. Reasoning is MANDATORY (the 2026-10-22 lesson): open-weight models of this kind may think on every call; with no thinking budget their thinking used the whole 1400-token output and the answer came back empty. A 2000-token thinking budget (max_tokens 3400) is sent on every call. Meta's new flagship."
+    },
+    {
+      "alias": "mistral-large-4",
+      "openrouterId": "mistralai/mistral-large-4-0",
+      "label": "Mistral Large 4",
+      "enabled": true,
+      "params": {
+        "temperature": 0.8,
+        "top_p": null
+      },
+      "maxOutputTokens": 1400,
+      "reasoning": {
+        "enabled": false,
+        "style": "effort",
+        "effort": "low",
+        "maxTokens": 2000,
+        "exclude": true,
+        "mandatory": false
+      },
+      "structuredOutput": "auto",
+      "provider": {
+        "order": [],
+        "allow_fallbacks": true
+      },
+      "attemptTimeoutMs": 90000,
+      "maxConcurrency": 4,
+      "cacheControl": "auto",
+      "notes": "Catalogue 2026-10-26: $1.36 in / $4.18 out per 1M tokens, 1,048,576 context. Added 2026-10-26, not yet played: run `ww models check --ping` before a real game."
+    }
+  ]
+}

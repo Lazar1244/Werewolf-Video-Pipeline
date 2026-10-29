@@ -1,0 +1,1 @@
+- "inner_voice" comes first: your character's inner voice about the game, a few sentences in character on what they think and why they choose this answer. The other players never see it; viewers see it as part of the story after the game.

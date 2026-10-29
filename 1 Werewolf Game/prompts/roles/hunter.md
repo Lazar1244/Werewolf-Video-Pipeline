@@ -1,0 +1,1 @@
+- Hunter — Village team. When the Hunter dies (any cause) while their power is active, they must shoot one living player, who dies too. The shot is public.

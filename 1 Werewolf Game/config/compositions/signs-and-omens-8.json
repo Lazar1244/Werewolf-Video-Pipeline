@@ -1,0 +1,20 @@
+{
+  "id": "signs-and-omens-8",
+  "label": "Signs and Omens",
+  "category": "recommended",
+  "seats": 8,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "seer",
+    "fox",
+    "raven",
+    "bear_tamer",
+    "villager",
+    "villager"
+  ],
+  "description": "A table full of clues: a vision, a sniff, a Raven's accusation and a bear that growls when a wolf sits beside its tamer. Made for reasoners.",
+  "tags": [
+    "information"
+  ]
+}

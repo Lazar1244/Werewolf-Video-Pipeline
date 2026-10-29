@@ -1,0 +1,14 @@
+{
+ "_about": "Each model keeps one character voice in every video (owner, 2026-10-22: long-term viewers remember them). Keys are the model's short name as the game records it; values are a locked voice in '3 Werewolf TTS/characters'. Game 1 (3880b590) set the first six; a model that is new to the videos gets its seat's voice in its first game, or an unused one if that voice already belongs to another model (director/episode.py adds it here). Game 3 (c0416225, owner 2026-10-27): earlier choices stay; the two new Chinese models got random unused voices (never Hugo, the Texas rancher). Rule (owner, 2026-10-27): only a model new to the videos gets a voice, always one no model has yet, so no two models ever share a voice.",
+ "Claude Fable 5.1": "Nico",
+ "Claude Opus 5.5": "Ines",
+ "GPT-6 Sol": "Dario",
+ "GPT-6 Astra": "Pavel",
+ "Gemini 3.1 Pro": "Mila",
+ "Grok 4.7": "Viggo",
+ "DeepSeek V4.1 Flash": "Oda",
+ "DeepSeek V4 Pro": "Tilde",
+ "Qwen 3.8 Max": "Elin",
+ "Gemini 4 Argon": "Hugo",
+ "Muse Wonder": "Lars"
+}

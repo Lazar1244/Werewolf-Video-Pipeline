@@ -1,0 +1,25 @@
+{
+  "name": "@ww/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/static": "^10.1.4",
+    "@fastify/websocket": "^11.2.0",
+    "@ww/client-sdk": "0.1.0",
+    "@ww/config": "0.1.0",
+    "@ww/context": "0.1.0",
+    "@ww/controllers": "0.1.0",
+    "@ww/engine": "0.1.0",
+    "@ww/llm": "0.1.0",
+    "@ww/projector": "0.1.0",
+    "@ww/shared": "0.1.0",
+    "@ww/store": "0.1.0",
+    "fastify": "^5.6.2",
+    "zod": "^4.6.5"
+  }
+}

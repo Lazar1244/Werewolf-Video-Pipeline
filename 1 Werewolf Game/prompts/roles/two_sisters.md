@@ -1,0 +1,1 @@
+- Two Sisters (two cards) — Village team. On Night 1 they learn each other. They share a short private message channel at night.

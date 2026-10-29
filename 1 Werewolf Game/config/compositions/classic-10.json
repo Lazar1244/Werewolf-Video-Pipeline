@@ -1,0 +1,22 @@
+{
+  "id": "classic-10",
+  "label": "Classic 10",
+  "category": "classic",
+  "seats": 10,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "werewolf",
+    "seer",
+    "witch",
+    "hunter",
+    "protector",
+    "little_girl",
+    "villager",
+    "villager"
+  ],
+  "description": "A full table with three wolves, and a Little Girl who can spy on their council at her own risk.",
+  "tags": [
+    "full table"
+  ]
+}

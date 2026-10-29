@@ -1,0 +1,1 @@
+- Lovers (a cross-team couple, possibly with Cupid): win when at least one Lover is alive and every living player is on team Lovers.

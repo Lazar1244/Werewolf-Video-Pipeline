@@ -1,0 +1,1 @@
+- White Werewolf — its own team (wolf nature). Sits in the pack's council as if it were a plain Werewolf, but on even nights may secretly kill one other pack member. Wins only by being the very last player alive.

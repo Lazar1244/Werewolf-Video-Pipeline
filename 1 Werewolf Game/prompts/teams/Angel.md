@@ -1,0 +1,1 @@
+- Angel: wins alone by dying before Night 2.{{angel_rule}}

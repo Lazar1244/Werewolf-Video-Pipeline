@@ -1,0 +1,1 @@
+- Bear Tamer — Village team. Each Dawn, the Tamer's bear publicly growls if the Tamer or one of the Tamer's two living neighbours has wolf nature.

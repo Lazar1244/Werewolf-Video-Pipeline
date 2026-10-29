@@ -1,0 +1,1 @@
+- Elder — Village team. Survives the first attack by the werewolves (including an infection) and dies to the second. {{elder_curse}}

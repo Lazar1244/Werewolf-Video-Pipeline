@@ -1,0 +1,14 @@
+{
+  "name": "@ww/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./roles": "./src/roles.ts",
+    "./deal": "./src/deal.ts"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  }
+}

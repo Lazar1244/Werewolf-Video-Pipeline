@@ -1,0 +1,9 @@
+{
+  "//": "Browser-safe packages must compile without Node types (ARCHITECTURE.md §3).",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM"],
+    "types": []
+  },
+  "include": ["packages/shared/src/**/*.ts", "packages/engine/src/**/*.ts", "packages/projector/src/**/*.ts", "packages/client-sdk/src/**/*.ts"]
+}

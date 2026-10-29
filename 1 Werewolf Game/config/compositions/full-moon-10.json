@@ -1,0 +1,24 @@
+{
+  "id": "full-moon-10",
+  "label": "Full Moon",
+  "category": "recommended",
+  "seats": 10,
+  "cards": [
+    "big_bad_wolf",
+    "accursed_wolf_father",
+    "werewolf",
+    "seer",
+    "witch",
+    "protector",
+    "hunter",
+    "fox",
+    "little_girl",
+    "villager"
+  ],
+  "description": "The strongest pack: a Big Bad Wolf, a Wolf-Father who can turn a villager, and a plain wolf, against a village with every tool.",
+  "tags": [
+    "wolves",
+    "full table"
+  ],
+  "notes": "Leans towards the wolves in random-bot play: calibration candidate."
+}

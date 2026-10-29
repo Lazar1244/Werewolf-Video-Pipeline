@@ -1,0 +1,1 @@
+- Little Girl — Village team. At night she may spy on the werewolves' council. If not caught she overhears their discussion (with the wolves' names hidden) and learns their victim. Each night she spies there is a {{catch_pct}} chance she is caught: the pack learns who she is, and she learns nothing that night (she is not told she was caught).

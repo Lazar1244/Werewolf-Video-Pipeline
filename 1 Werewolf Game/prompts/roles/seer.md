@@ -1,0 +1,1 @@
+- Seer — Village team. Every night, inspects one living player other than themself and learns {{seer_result}}. Someone infected the same night still reads as before, because infection happens at Dawn.

@@ -1,0 +1,1 @@
+- Werewolves: win when every living player is on the Werewolf team, or earlier when the werewolves are at least as many as everyone else and nothing can still turn the game (no living solo player, no pending Knight curse, no Village Sheriff, and no powered Village player with an unused poison, Hunter shot, Raven or Judge's second vote).

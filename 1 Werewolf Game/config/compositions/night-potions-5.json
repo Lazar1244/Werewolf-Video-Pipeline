@@ -1,0 +1,18 @@
+{
+  "id": "night-potions-5",
+  "label": "Night Potions",
+  "category": "recommended",
+  "seats": 5,
+  "cards": [
+    "werewolf",
+    "witch",
+    "villager",
+    "villager",
+    "villager"
+  ],
+  "description": "A lone wolf against a Witch who knows each night's victim. Everything turns on when she spends her potions.",
+  "tags": [
+    "quick",
+    "beginner"
+  ]
+}

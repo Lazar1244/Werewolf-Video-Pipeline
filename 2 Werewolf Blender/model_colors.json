@@ -1,0 +1,17 @@
+{
+ "_about": "Each model keeps one colour in every video (owner, 2026-10-27: 'keep game 2's colors and from now on', like the voices in voice_cast.json). Keys are the model's short name as the game records it; values are names in village/colors.py PALETTE. Game 2 (06ce0859) set the first seven (each keeps its Game 2 seat colour). A model new to the videos gets a colour no model has yet (random from the unused ones; never red, the wolves' colour); colors.use_game() adds one automatically if a game brings a model that is not here. Game 1 keeps its own seat colours, as published.",
+ "_seat_colours_games": ["3880b590"],
+ "colours": {
+  "Gemini 3.1 Pro": "amber",
+  "GPT-6 Sol": "sky blue",
+  "Grok 4.7": "green",
+  "Claude Fable 5.1": "magenta",
+  "GPT-6 Astra": "white",
+  "DeepSeek V4.1 Flash": "cyan",
+  "Claude Opus 5.5": "violet",
+  "DeepSeek V4 Pro": "orange",
+  "Qwen 3.8 Max": "peach",
+  "Gemini 4 Argon": "lime",
+  "Muse Wonder": "royal blue"
+ }
+}

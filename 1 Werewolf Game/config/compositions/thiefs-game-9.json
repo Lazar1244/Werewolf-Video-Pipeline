@@ -1,0 +1,24 @@
+{
+  "id": "thiefs-game-9",
+  "label": "The Thief's Game",
+  "category": "recommended",
+  "seats": 9,
+  "cards": [
+    "thief",
+    "werewolf",
+    "werewolf",
+    "seer",
+    "witch",
+    "hunter",
+    "cupid",
+    "little_girl",
+    "villager",
+    "villager",
+    "villager"
+  ],
+  "description": "Two cards are set aside and the Thief may swap for one of them, so the cards in play are never quite certain. With Lovers and a Little Girl.",
+  "tags": [
+    "deception",
+    "lovers"
+  ]
+}

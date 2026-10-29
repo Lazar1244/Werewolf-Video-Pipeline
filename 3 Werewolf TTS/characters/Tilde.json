@@ -1,0 +1,303 @@
+{
+  "name": "Tilde",
+  "kind": "player",
+  "gender": "female",
+  "candidates": [
+    {
+      "label": "A",
+      "voice": "voice_0srip41i3hbc",
+      "description": "A bubbly young woman in her early 20s with a high, breathy voice, a strong Finnish accent, and a giggly, quick pace.",
+      "created": "2026-10-09",
+      "expire_time": "2027-10-09T13:35:59.927432685Z",
+      "usage": {
+        "total_tokens": 1261,
+        "total_input_tokens": 220,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 70
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1041,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1041
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 163,
+        "raw_prompt_token": 383,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 233
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1046
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 163
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 233
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1046
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 163
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "B",
+      "voice": "voice_h7jmzverab20",
+      "description": "A dreamy young woman in her mid 20s with a soft, clear soprano voice, a strong Finnish accent, and a slow, floaty pace.",
+      "created": "2026-10-09",
+      "expire_time": "2027-10-09T13:36:31.915405631Z",
+      "usage": {
+        "total_tokens": 1577,
+        "total_input_tokens": 219,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 69
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1358,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1358
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 140,
+        "raw_prompt_token": 382,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 232
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1363
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 140
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 232
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 1363
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 140
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "C",
+      "voice": "voice_n9ep33qkszzh",
+      "description": "A blunt young woman in her late 20s with a flat, deadpan mezzo voice, a strong Finnish accent, and a steady, matter-of-fact pace.",
+      "created": "2026-10-09",
+      "expire_time": "2027-10-09T13:37:01.120640995Z",
+      "usage": {
+        "total_tokens": 872,
+        "total_input_tokens": 227,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 77
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 645,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 645
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 127,
+        "raw_prompt_token": 390,
+        "model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 240
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 650
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 127
+              }
+            ]
+          }
+        ],
+        "non_grounding_model_invocation_token_counts": [
+          {
+            "prompt_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 240
+              }
+            ],
+            "candidates_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 650
+              }
+            ],
+            "thoughts_tokens_details": [
+              {
+                "modality": "text",
+                "tokens": 127
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "voice": "voice_h7jmzverab20",
+  "locked": true,
+  "base_style": "",
+  "notes": "",
+  "voice_description": "A dreamy young woman in her mid 20s with a soft, clear soprano voice, a strong Finnish accent, and a slow, floaty pace.",
+  "approved": {
+    "intro": {
+      "take": 10,
+      "style": "speaking up clearly to the whole circle, full voice",
+      "text": "I'm Tilde. I don't have much to go on yet, so I'll listen first <short pause> and speak when something doesn't add up.",
+      "folder": "output\\Tilde\\01 Villager - Opening words"
+    },
+    "accuse": {
+      "take": 11,
+      "style": "firm and pointed, rising intensity",
+      "text": "Cora, you've dodged every question tonight. <short pause> Twice you changed your story. I'm voting for YOU.",
+      "folder": "output\\Tilde\\02 Villager - Accusing someone"
+    },
+    "defend": {
+      "take": 12,
+      "style": "defensive and frustrated, voice rising",
+      "text": "That's not fair! I've given you every reason I had. <breath> If you vote me out, you're doing the wolves' work for them.",
+      "folder": "output\\Tilde\\03 Villager - Defending herself"
+    },
+    "fear": {
+      "take": 13,
+      "style": "shaky and scared, speaking fast",
+      "text": "Wait, wait <gasp> you've got it wrong! I swear I'm not one of them, ask Dario!",
+      "folder": "output\\Tilde\\04 Villager - Scared when accused"
+    },
+    "sheriff": {
+      "take": 14,
+      "style": "firm and determined, full of conviction",
+      "text": "Thank you. I'll carry this star with care <short pause> and I WILL find them. I promise.",
+      "folder": "output\\Tilde\\05 Villager - Elected Sheriff"
+    },
+    "lastwords": {
+      "take": 15,
+      "style": "resigned and heavy, slow",
+      "text": "So this is how it ends. <sigh> Remember my name when the wolves come for you.",
+      "folder": "output\\Tilde\\06 Villager - Last words at the gallows"
+    },
+    "lie": {
+      "take": 16,
+      "style": "smooth and confident, slightly too relaxed, strong Finnish accent",
+      "text": "Me? I slept like a stone. <chuckle> Honestly, I'm as lost as the rest of you.",
+      "folder": "output\\Tilde\\07 Werewolf - Calm lie in public"
+    },
+    "guiltydefend": {
+      "take": 25,
+      "style": "controlled, wounded innocence, a little too smooth",
+      "text": "Think about it. <short pause> If I were a wolf, would I really be the one asking all the questions?",
+      "folder": "output\\Tilde\\08 Werewolf - Defending herself while guilty"
+    },
+    "packwhisper": {
+      "take": 22,
+      "style": "whispered urgently, conspiratorial",
+      "text": "Listen. <short pause> They're watching Cora. We take Dario tonight, and tomorrow I point them somewhere else.",
+      "folder": "output\\Tilde\\09 Werewolf - Night whisper to the pack"
+    },
+    "seerthought": {
+      "take": 24,
+      "style": "whispering to herself, uneasy",
+      "text": "I looked into Cora's soul last night... <short pause> nothing. So who is lying to us?",
+      "folder": "output\\Tilde\\11 Special role - Seer inner thought"
+    },
+    "seerreveal": {
+      "take": 20,
+      "style": "urgent and grave, forceful",
+      "text": "I'm the Seer. <short pause> Last night I looked at Dario... and I saw a WOLF.",
+      "folder": "output\\Tilde\\12 Special role - Seer revealing what she saw"
+    },
+    "wolfthought": {
+      "take": 23,
+      "style": "whispering to herself, cold and calculating",
+      "text": "If I push too hard, they'll see it... <long pause> Patience. Let them turn on each other.",
+      "folder": "output\\Tilde\\10 Werewolf - Inner monologue"
+    }
+  },
+  "locked_at": "2026-10-14"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@ww/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "ww": "./src/main.ts"
+  },
+  "dependencies": {
+    "@ww/shared": "0.1.0",
+    "@ww/engine": "0.1.0",
+    "@ww/projector": "0.1.0",
+    "@ww/context": "0.1.0",
+    "@ww/llm": "0.1.0",
+    "@ww/controllers": "0.1.0",
+    "@ww/config": "0.1.0",
+    "@ww/store": "0.1.0",
+    "@ww/server": "0.1.0"
+  }
+}

@@ -1,0 +1,1 @@
+You received the most suspicion in the discussion. Give a short rebuttal before the vote in "speech" (at most {{words}} words). Set "lean" to the seat you suspect most right now (or null), and "claim" to a role claim you make in this speech ({"role": role id, "result": short text or null}) or null.

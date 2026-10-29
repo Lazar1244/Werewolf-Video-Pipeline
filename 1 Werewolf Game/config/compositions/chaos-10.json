@@ -1,0 +1,23 @@
+{
+  "id": "chaos-10",
+  "label": "Chaos 10",
+  "category": "recommended",
+  "seats": 10,
+  "cards": [
+    "werewolf",
+    "accursed_wolf_father",
+    "seer",
+    "witch",
+    "fox",
+    "knight",
+    "elder",
+    "bear_tamer",
+    "village_idiot",
+    "piper"
+  ],
+  "description": "Almost every seat is a special role, the Wolf-Father can turn a villager, and the Piper plays for himself.",
+  "tags": [
+    "chaos",
+    "solo"
+  ]
+}

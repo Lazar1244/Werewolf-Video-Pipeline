@@ -1,0 +1,21 @@
+{
+  "id": "angels-bet-9",
+  "label": "Angel's Bet",
+  "category": "recommended",
+  "seats": 9,
+  "cards": [
+    "angel",
+    "werewolf",
+    "werewolf",
+    "seer",
+    "witch",
+    "hunter",
+    "elder",
+    "villager",
+    "villager"
+  ],
+  "description": "The Angel wins alone by dying before the second night. Is that eager suspect a wolf, or someone who wants to be eliminated?",
+  "tags": [
+    "solo"
+  ]
+}

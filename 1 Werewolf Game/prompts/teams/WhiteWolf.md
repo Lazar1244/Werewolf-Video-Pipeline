@@ -1,0 +1,1 @@
+- White Werewolf: wins alone by being the only player left alive.

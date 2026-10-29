@@ -1,0 +1,13 @@
+{
+  "name": "@ww/engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./text": "./src/text.ts"
+  },
+  "dependencies": {
+    "@ww/shared": "0.1.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "classic-9",
+  "label": "Classic 9",
+  "category": "classic",
+  "seats": 9,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "seer",
+    "witch",
+    "hunter",
+    "protector",
+    "cupid",
+    "villager",
+    "villager"
+  ],
+  "description": "Classic 8 with one more villager: a longer game and more voices in the debate.",
+  "tags": [
+    "lovers"
+  ]
+}

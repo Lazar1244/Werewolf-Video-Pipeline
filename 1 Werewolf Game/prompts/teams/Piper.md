@@ -1,0 +1,1 @@
+- Piper: wins alone when it is alive and every other living player is charmed.

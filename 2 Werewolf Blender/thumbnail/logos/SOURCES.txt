@@ -1,0 +1,28 @@
+The labs' logos on the figures' chests, downloaded 2026-10-19 from Wikimedia Commons (owner approved).
+Symbols only (no wordmarks). They are trademarks of their owners and are used only to show which AI plays which figure.
+
+openai.svg  https://commons.wikimedia.org/wiki/File:OpenAI_logo_2025_(symbol).svg
+            https://upload.wikimedia.org/wikipedia/commons/6/66/OpenAI_logo_2025_%28symbol%29.svg
+            1,894 bytes. Public domain (PD-textlogo: below the threshold of originality), trademarked.
+claude.svg  https://commons.wikimedia.org/wiki/File:Claude_AI_symbol.svg
+            https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg
+            1,155 bytes. CC0 1.0.
+gemini.svg  https://commons.wikimedia.org/wiki/File:Google_Gemini_icon_2025.svg
+            https://upload.wikimedia.org/wikipedia/commons/1/1d/Google_Gemini_icon_2025.svg
+            8,712 bytes. Public domain (PD-textlogo), trademarked.
+grok.svg    https://commons.wikimedia.org/wiki/File:Grok-icon.svg
+            https://upload.wikimedia.org/wikipedia/commons/f/f9/Grok-icon.svg
+            1,148 bytes. CC0 1.0.
+
+deepseek.svg https://commons.wikimedia.org/wiki/File:DeepSeek-icon.svg
+            https://upload.wikimedia.org/wikipedia/commons/9/95/DeepSeek-icon.svg
+            3,605 bytes. MIT. Downloaded 2026-10-23 for Game 2 (owner approved). The whale icon only, #4D6BFE.
+
+png/<lab>.png are made from these: rasterize_logos.py (headless Edge) then prep_logos.py.
+
+qwen.svg    https://commons.wikimedia.org/wiki/File:Qwen_logo.svg
+            https://upload.wikimedia.org/wikipedia/commons/6/69/Qwen_logo.svg
+            1,619 bytes. CC0. Downloaded 2026-10-28 for Game 3 (owner approved). The purple symbol only (200x200).
+meta.svg    https://commons.wikimedia.org/wiki/File:Meta_Platforms_Inc._logo_(cropped).svg
+            https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo_%28cropped%29.svg
+            2,399 bytes. Public domain. Downloaded 2026-10-28 for Game 3 (owner approved). The blue infinity mark only.

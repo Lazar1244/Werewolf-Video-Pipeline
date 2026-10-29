@@ -1,0 +1,344 @@
+{
+  "name": "Host",
+  "kind": "host",
+  "gender": null,
+  "candidates": [
+    {
+      "label": "B",
+      "voice": "voice_zh1rn8225kn3",
+      "description": "A young woman in her mid 20s with a bright, crisp voice, a General American accent, and a fast, confident delivery.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:38:49.615625838Z",
+      "usage": {
+        "total_tokens": 1736,
+        "total_input_tokens": 276,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 126
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 1460,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 1460
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 193
+      }
+    },
+    {
+      "label": "C",
+      "voice": "voice_r8ai993we36o",
+      "description": "A young man in his mid 20s with a lively, slightly husky baritone, a London accent, and a cheeky, quick-witted delivery.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:39:18.923365777Z",
+      "usage": {
+        "total_tokens": 702,
+        "total_input_tokens": 263,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 113
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 439,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 439
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 941
+      }
+    },
+    {
+      "label": "D",
+      "voice": "voice_l6pr472r6zqx",
+      "description": "A young woman in her early 20s with a warm, bubbly voice, an Australian accent, and a fast, playful delivery.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:39:48.219784481Z",
+      "usage": {
+        "total_tokens": 1219,
+        "total_input_tokens": 240,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 90
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 979,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 979
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 179
+      }
+    },
+    {
+      "label": "E",
+      "voice": "voice_006l630dyed4",
+      "description": "A young man in his late 20s with a rich, punchy baritone, a General American accent, and the crisp, driving delivery of a movie-trailer narrator.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:40:10.369022226Z",
+      "usage": {
+        "total_tokens": 724,
+        "total_input_tokens": 236,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 86
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 488,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 488
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 188
+      }
+    },
+    {
+      "label": "F",
+      "voice": "voice_t5be7t96wq73",
+      "description": "A young woman in her late 20s with a low, smoky voice, a General American accent, and a sly, energetic delivery.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:40:42.167139478Z",
+      "usage": {
+        "total_tokens": 822,
+        "total_input_tokens": 210,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 60
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 612,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 612
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 1071
+      }
+    },
+    {
+      "label": "G",
+      "voice": "voice_y66l6ididseh",
+      "description": "A young man in his early 20s with a slightly raspy, energetic voice, a Californian accent, and the fast, excited delivery of a gaming streamer.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:41:08.163444473Z",
+      "usage": {
+        "total_tokens": 1010,
+        "total_input_tokens": 261,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 111
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 749,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 749
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 217
+      }
+    },
+    {
+      "label": "H",
+      "voice": "voice_nr70ddxu48jt",
+      "description": "A young woman in her mid 20s with a clear, polished voice, a Southern English accent, and a brisk, witty delivery.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:41:35.412800691Z",
+      "usage": {
+        "total_tokens": 1115,
+        "total_input_tokens": 239,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 89
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 876,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 876
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 191
+      }
+    },
+    {
+      "label": "I",
+      "voice": "voice_6txkt4byvvvo",
+      "description": "A young man in his mid 20s with a warm, lively voice, an Irish accent, and a fast, storytelling delivery.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:42:22.906366055Z",
+      "usage": {
+        "total_tokens": 2436,
+        "total_input_tokens": 248,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 98
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 2188,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 2188
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 101
+      }
+    },
+    {
+      "label": "J",
+      "voice": "voice_tt5evcoi4gfp",
+      "description": "A young woman in her mid 20s with a slightly raspy, intense voice, a General American accent, and the gripping, fast delivery of a true-crime podcaster.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:42:50.181549887Z",
+      "usage": {
+        "total_tokens": 1021,
+        "total_input_tokens": 233,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 83
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 788,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 788
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 170
+      }
+    },
+    {
+      "label": "K",
+      "voice": "voice_x37r2me5yr2e",
+      "description": "A young man in his mid 20s with a crisp, confident voice, a Canadian accent, and the sharp, energetic delivery of a documentary host.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:43:19.092886042Z",
+      "usage": {
+        "total_tokens": 969,
+        "total_input_tokens": 283,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 133
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 686,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 686
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 150
+      }
+    },
+    {
+      "label": "L",
+      "voice": "voice_250xpz5gylfh",
+      "description": "A young woman in her early 20s with a bright, punchy voice, a Scottish accent, and a fast, spirited delivery.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:43:51.400972354Z",
+      "usage": {
+        "total_tokens": 557,
+        "total_input_tokens": 223,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 73
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 334,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 334
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 928
+      }
+    },
+    {
+      "label": "A",
+      "voice": "voice_gxj7z9o93msm",
+      "description": "A young man in his early 20s with a bright, clear tenor voice, an American accent, and quick, lively delivery.",
+      "created": "2026-10-19",
+      "expire_time": "2027-10-19T19:45:14.276356594Z",
+      "usage": {
+        "total_tokens": 1071,
+        "total_input_tokens": 239,
+        "input_tokens_by_modality": [
+          {
+            "modality": "text",
+            "tokens": 89
+          }
+        ],
+        "total_cached_tokens": 0,
+        "total_output_tokens": 832,
+        "output_tokens_by_modality": [
+          {
+            "modality": "audio",
+            "tokens": 832
+          }
+        ],
+        "total_tool_use_tokens": 0,
+        "total_thought_tokens": 89
+      }
+    }
+  ],
+  "base_style": "high-energy video host, punchy and fast",
+  "notes": "The intro: the hook, the players, the rules and every role. Energetic and younger.",
+  "voice": "voice_006l630dyed4",
+  "locked": true,
+  "locked_at": "2026-10-19",
+  "voice_description": "A young man in his late 20s with a rich, punchy baritone, a General American accent, and the crisp, driving delivery of a movie-trailer narrator.",
+  "approved": {
+    "intro": {
+      "style": "high-energy video host, punchy and fast",
+      "text": "the intro script (Option A)",
+      "source": "output/Host/1 Style variants/E - 1 hook host - take 1.wav"
+    }
+  }
+}

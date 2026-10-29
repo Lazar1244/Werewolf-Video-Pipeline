@@ -1,0 +1,15 @@
+{
+  "name": "@ww/controllers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@ww/shared": "0.1.0",
+    "@ww/engine": "0.1.0",
+    "@ww/context": "0.1.0",
+    "@ww/llm": "0.1.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "lovers-night-7",
+  "label": "Lovers' Night",
+  "category": "recommended",
+  "seats": 7,
+  "cards": [
+    "werewolf",
+    "werewolf",
+    "seer",
+    "witch",
+    "cupid",
+    "hunter",
+    "villager"
+  ],
+  "description": "Cupid links two players on the first night. If a wolf and a villager fall in love, they — and Cupid with them — play for themselves and win only together.",
+  "tags": [
+    "lovers"
+  ]
+}

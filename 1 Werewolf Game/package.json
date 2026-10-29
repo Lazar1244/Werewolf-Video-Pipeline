@@ -1,0 +1,29 @@
+{
+  "name": "wearwolfe-game",
+  "private": true,
+  "version": "0.1.0",
+  "description": "AI Werewolf: LLMs (via OpenRouter) and humans playing Werewolf",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.browser.json --noEmit && tsc -p tsconfig.web.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run test",
+    "config:check": "tsx packages/config/src/cli-check.ts",
+    "ww": "tsx apps/cli/src/main.ts",
+    "build:web": "node apps/web/build.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  }
+}
